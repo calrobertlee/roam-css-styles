@@ -1,3 +1,7 @@
 # roam-css-styles
-Visually polished CSS styles for RoamResearch  
-Test push
+Polished CSS styles for RoamResearch
+
+Working on:
+- Dark theme
+- Sepia theme
+- Electron standalone app
