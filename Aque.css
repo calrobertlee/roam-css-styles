@@ -2,6 +2,9 @@
 https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne?hl=en
 */
 
+#buffer { /* HIDES BOTTOM RIGHT HELP ICON */
+    visibility: hidden;
+}
 
 /* ARTICLE WIDTH */
 
