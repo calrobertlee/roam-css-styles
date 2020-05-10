@@ -1,3 +1,9 @@
+/*Add styling with Chrome Stylus Extension
+https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne?hl=en
+*/
+
+
+/* ARTICLE WIDTH */
 
 .rm-block-text {
   max-width: 1100px;
@@ -17,18 +23,56 @@
     max-width: 1100px;
 }
 
+/* ARTICLE PADDING */
+#rm-log-container {
+    padding-right: calc((100% - 900px) / 2) !important;
+    padding-left: calc((100% - 900px) / 2) !important;
+    height: 100% !important;
+    overflow: hidden scroll !important;
+}
+
+/* MAIN DIV ELEMENTS COLORS & BORDERS */
 body {
     background-color: #ffffff;
 }
+
+.roam-topbar {
+    background-color: rgb(253, 253, 253) !important;
+    border-bottom: 1px solid #eaeaea;
+}
+
+#right-sidebar {
+    background-color: rgb(253, 253, 253) !important;
+    border-left: 1px solid #eaeaea;
+}
+
+.roam-body .roam-app .roam-sidebar-container {
+    background-color: #2e3234;
+
+}
+
+.roam-log-container .roam-log-page {
+    border-top: 1px solid rgb(225, 225, 225);
+}
+
+.rm-reference-item { /* the reference boxes at the bottom */
+    background-color: rgb(253, 253, 253);
+    border-radius: 6px;
+    border: 1px solid #e6e6e68a;
+}
+
+/* FONT COLORS */
 
 .rm-level3 {
     font-weight: 400;
     font-size: 1.2em;
     color: #75b5ff;
 }
+
 .rm-page-ref-brackets {
     color: #bfbfbf;
 }
+
 .roam-app { /* primary text colour */
     color: #282828 !important;
 }
@@ -41,37 +85,20 @@ body {
     background-color: #d8ecff;
 }
 
-
-.check-container input:checked ~ .checkmark {
+.check-container input:checked ~ .checkmark { /* Checked color, might be too light for some people! */
     background-color: #dbdbdb;
     border: none;
 }
-/*
-a {
-    color: #8c2d2e;
-    text-decoration: none;
-}
-*/
+
 a {
     color: #0073f9;
     text-decoration: none;
 }
+
 a:hover {
     color: #5ca7ff;
     text-decoration: none;
 }
-
-
-.roam-topbar {
-    background-color: rgb(253, 253, 253) !important;
-    border-bottom: 1px solid #eaeaea;
-}
-/*
-.block-highlight-blue {
-    background-color: #a9cff0;
-}
-*/
-
 
 /* hashtag */
 .rm-page-ref-tag {
@@ -82,8 +109,6 @@ a:hover {
     border: 1px solid #e6e6e682;
     padding: 1px 5px 2px;
 }
-
-
 
 .rm-page-ref-tag:hover {
     background-color: #dbdbdb;
@@ -97,27 +122,19 @@ a:hover {
     background-color: #0069e3;
 }
 
+.roam-bullet-closed { /* expandable bullets */
+    background-color: #bcdbff;
+}
 
 .block-border-left { /* the tree graphics */
     border-left: 2px solid #e8e8e8;
 }
-
-
-
 
 .roam-highlight { /* highlighting */
     background-color: #fff1a4;
     color: #424242;
     border-radius: 0px;
     padding: 5px 5px 4px 5px;
-}
-.roam-bullet-closed { /* expandable bullets */
-    background-color: #bcdbff;
-}
-
-.roam-body .roam-app .roam-sidebar-container {
-    background-color: #2e3234;
-
 }
 
 .roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .log-button {
@@ -132,18 +149,8 @@ a:hover {
     color: #717171;
 }
 
-/*
-.roam-topbar {
-    background-color: #393939;
-}
-*/
-
 .rm-page-ref-link-color {
     color: #0073f9d4;
-}
-
-.roam-log-container .roam-log-page {
-    border-top: 1px solid rgb(225, 225, 225);
 }
 
 code {
@@ -162,7 +169,7 @@ code {
     color: white;
 }
 
-
+/* KANBAN */
 .kanban-board {
     background-color: #f9fcffd4;
     border-radius: 10px;
@@ -182,24 +189,4 @@ code {
     border: 1px solid #dbdbdb;
     margin: 6px;
     padding: 8px;
-}
-
-.rm-reference-item { /* the reference boxes at the bottom */
-    background-color: rgb(253, 253, 253);
-    border-radius: 6px;
-    border: 1px solid #e6e6e68a;
-}
-
-#right-sidebar {
-    /*background-color: rgb(252, 252, 252) !important;*/
-    background-color: rgb(253, 253, 253) !important;
-    /*    background-color: #efefef66 !important;*/
-    border-left: 1px solid #eaeaea;
-}
-
-#rm-log-container {
-    padding-right: calc((100% - 900px) / 2) !important;
-    padding-left: calc((100% - 900px) / 2) !important;
-    height: 100% !important;
-    overflow: hidden scroll !important;
 }
