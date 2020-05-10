@@ -34,6 +34,13 @@ https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmn
     overflow: hidden scroll !important;
 }
 
+.roam-center > div:nth-child(1) {
+    padding-right: calc((100% - 900px) / 2) !important;
+    padding-left: calc((100% - 900px) / 2) !important;
+    height: 100% !important;
+    overflow: hidden scroll !important;
+}
+
 /* MAIN DIV ELEMENTS COLORS & BORDERS */
 body {
     background-color: #ffffff;
