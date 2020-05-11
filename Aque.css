@@ -27,6 +27,7 @@ https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmn
 }
 
 /* ARTICLE PADDING */
+
 #rm-log-container {
     padding-right: calc((100% - 900px) / 2) !important;
     padding-left: calc((100% - 900px) / 2) !important;
@@ -47,12 +48,12 @@ body {
 }
 
 .roam-topbar {
-    background-color: rgb(253, 253, 253) !important;
+    background-color: rgb(250, 252, 253) !important;
     border-bottom: 1px solid #eaeaea;
 }
 
 #right-sidebar {
-    background-color: rgb(253, 253, 253) !important;
+    background-color: rgb(250, 252, 253) !important;
     border-left: 1px solid #eaeaea;
 }
 
@@ -181,7 +182,7 @@ code {
 
 /* KANBAN */
 .kanban-board {
-    background-color: #f9fcffd4;
+    background-color: rgb(250, 252, 253);
     border-radius: 10px;
     border: 1px solid #e6e6e6;
     padding: 12px;
