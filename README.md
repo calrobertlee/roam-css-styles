@@ -6,4 +6,4 @@ Working on:
 - Sepia theme
 - Electron standalone app
 
-![Aque](![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+![Aque](https://github.com/garlicagreement/roam-css-styles/blob/master/Aque%201.3%20-%20Screenshot.jpg?raw=true)
