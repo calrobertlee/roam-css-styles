@@ -35,7 +35,7 @@ https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmn
     overflow: hidden scroll !important;
 }
 
-/* Centers text in main article, creates a bug in Graph Overview, however so turning it off
+/* Centers text in main article, creates a bug in Graph Overview however, so turning it off
 .roam-center > div:nth-child(1) {
     padding-right: calc((100% - 900px) / 2) !important;
     padding-left: calc((100% - 900px) / 2) !important;
