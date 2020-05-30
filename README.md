@@ -2,10 +2,12 @@
 Polished CSS styles for RoamResearch
 
 ## Working on:
-- Dark theme
 - Sepia theme
 - Electron standalone app
 
-## Images
-#### Aque
-![Aque](https://github.com/garlicagreement/roam-css-styles/blob/master/Aque%201.3%20-%20Screenshot.jpg?raw=true)
+# Themes
+
+| Name | Description | Image |
+| :--: | :---------- | ----- |
+| Aquae | A minimal aqua theme for RoamResearch | ![](imageurl) |
+| Nox | A minimal dark theme for RoamResearch  | ![](imageurl) |
