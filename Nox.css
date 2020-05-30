@@ -1,6 +1,7 @@
 /*Add styling with Chrome Stylus Extension
 https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne?hl=en
 */
+/* Wiki page popup is still ugly, can't workaround the selector because the styling is from JS */
 
 #buffer { /* HIDES BOTTOM RIGHT HELP ICON */
     visibility: hidden;
