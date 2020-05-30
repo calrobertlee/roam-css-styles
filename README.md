@@ -2,6 +2,7 @@
 Polished CSS styles for RoamResearch
 
 ## Working on:
+- High contrast dark theme
 - Sepia theme
 - Electron standalone app
 
