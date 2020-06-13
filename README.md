@@ -1,7 +1,9 @@
 # Cal Robert's Roam Themes
-Minimal aestheic with highly refined color palettes
-Removed topbar for more space (shifted to right vertical bar)
-Centered search bar (using a bit of magic found in Azlen's Zenith theme)
+
+- Minimal aestheic with highly refined color palettes
+- Removed topbar for more space (shifted to right vertical bar)
+- Centered search bar (using a bit of magic found in Azlen's Zenith theme)
+
 UPDATED: Completely rebuilt Nox theme to address almost all element styling
 
 To use, copy the theme into a Roam page titled roam/css
