@@ -11,4 +11,4 @@ Polished CSS styles for RoamResearch
 | Name | Description | Image |
 | :--: | :---------- | ----- |
 | Aquae | A minimal aqua theme for RoamResearch | ![](https://raw.githubusercontent.com/garlicagreement/roam-css-styles/master/Images/Aquae%20Screenshot.png) |
-| Nox | A minimal dark theme for RoamResearch  | ![](https://raw.githubusercontent.com/garlicagreement/roam-css-styles/master/Images/Nox%20Screenshot.png) |
+| Nox | A minimal dark theme for RoamResearch  | ![](https://raw.githubusercontent.com/garlicagreement/roam-css-styles/master/Images/Nox2%20Screenshot.png) |
