@@ -3,7 +3,7 @@
 Theme:      Roam Aquae Theme
 Edits by:   Cal Robert Lee (https://www.calrobert.com/)
 Colors by:  Cal Robert Lee
-Version:    v2.1.1
+Version:    v2.1.2
 Mirror:     https://github.com/garlicagreement/roam-css-styles/blob/master/Aquae.css
 
 Quickfix:   - Introduced hover state on left sidebar
@@ -25,189 +25,189 @@ Notes:      - Thanks to the supportive people on r/RoamResearch
 
 :root {
   /* PRIMARY FONTS */
-  --main-font: 'Inter', sans-serif;  /*fully transferred*/
-  --main-font-color: #282828;  /*fully transferred*/
-  --main-font-size: 1.0em;  /*fully transferred*/
+  --main-font: 'Inter', sans-serif;
+  --main-font-color: #282828;
+  --main-font-size: 1.0em;
 
   /* FONT COLORS */
 
-  --page-link-color: #0073f9;  /*fully transferred*/
-  --page-bracket-color: #bfbfbf;  /*fully transferred*/a
-  --external-link-color: #0073f9;  /*fully transferred*/
-  --daily-notes-link-color: none;  /*fully transferred*/
-  --sidebar-link-color: none;  /*fully transferred*/
-  --h1-font-color: #202b33;  /*fully transferred*/
-  --h2-font-color: none;  /*fully transferred*/
-  --h3-font-color: #75b5ff;  /*fully transferred*/
-  --strong: #282828;  /*fully transferred*/
-  --emphasis: #282828;   /*fully transferred*/
-  --highlight-font-color: #282828;  /*fully transferred*/
-  --highlight-background-color: #fff1a4;  /*fully transferred*/
-  --highlight-link-color: #0073f9;  /*fully transferred*/
-  --highlight-padding: 5px 5px 4px 5px;  /*fully transferred*/
-  --reference-header-color: #d6eaff;  /*fully transferred*/
-  --sidebar-font-color: #717171;  /*fully transferred*/
-  --sidebar-font-color-hover: #969696;  /*fully transferred*/
-  --sidebar-hover-bg: none;  /*fully transferred*/
-  --sidebar-font-hover-color: #f5f8fa;  /*fully transferred*/
-  --sidebar-shorcut-color: #545454;  /*fully transferred*/
+  --page-link-color: #0073f9;
+  --page-bracket-color: #bfbfbf;
+  --external-link-color: #0073f9;
+  --daily-notes-link-color: none;
+  --sidebar-link-color: none;
+  --h1-font-color: #202b33;
+  --h2-font-color: none;
+  --h3-font-color: #75b5ff;
+  --strong: #282828;
+  --emphasis: #282828;
+  --highlight-font-color: #282828;
+  --highlight-background-color: #fff1a4;
+  --highlight-link-color: #0073f9;
+  --highlight-padding: 5px 5px 4px 5px;
+  --reference-header-color: #d6eaff;
+  --sidebar-font-color: #717171;
+  --sidebar-font-color-hover: #969696;
+  --sidebar-hover-bg: none;
+  --sidebar-font-hover-color: #f5f8fa;
+  --sidebar-shorcut-color: #545454;
 
-  --tag-font-color: #bebebe;  /*fully transferred*/
-  --tag-bg-color: #f9f9f9cf;  /*fully transferred*/
-  --tag-border-radius: 10px;  /*fully transferred*/
-  --tag-border: 1px solid #e6e6e682;  /*fully transferred*/
-  --tag-padding: 1px 5px 2px;  /*fully transferred*/
-  --tagHover-font-color: #b8b8b8;  /*fully transferred*/
-  --tagHover-bg-color: #e8e8e8;  /*fully transferred*/
-  --tagHover-border: 1px solid #dddddd82;  /*fully transferred*/
+  --tag-font-color: #bebebe;
+  --tag-bg-color: #f9f9f9cf;
+  --tag-border-radius: 10px;
+  --tag-border: 1px solid #e6e6e682;
+  --tag-padding: 1px 5px 2px;
+  --tagHover-font-color: #b8b8b8;
+  --tagHover-bg-color: #e8e8e8;
+  --tagHover-border: 1px solid #dddddd82;
 
-  --bullet-color: #0069e3;  /*fully transferred*/
-  --bullet-closed: #bcdbffb5;  /*fully transferred*/
-  --tree-vertline: 2px solid hsl(0, 0%, 96%);  /*fully transferred*/
+  --bullet-color: #0069e3;
+  --bullet-closed: #bcdbffb5;
+  --tree-vertline: 2px solid hsl(0, 0%, 96%);
   --bullet-position: ; /* UPDATE*/
 
-  --checkmark-top: -1px;  /*fully transferred*/
-  --checkmark-left: -2px;  /*fully transferred*/
-  --checkmarl-height: 14px;  /*fully transferred*/
-  --checkmark-width: 14px;  /*fully transferred*/
-  --checkmark-border-radius: 4px;  /*fully transferred*/
-  --checkmark-color: 1px solid #ffffff;  /*fully transferred*/
-  --checkmark-border: 1px solid hsl(0, 0%, 84%);  /*fully transferred*/
-  --checkmark-bg-color: #ffffff;  /*fully transferred*/
-  --checkedmark-border: 1px solid #ffffff0f;  /*fully transferred*/
-  --checkedmark-bg-color: #3c96ff;  /*fully transferred*/
+  --checkmark-top: -1px;
+  --checkmark-left: -2px;
+  --checkmarl-height: 14px;
+  --checkmark-width: 14px;
+  --checkmark-border-radius: 4px;
+  --checkmark-color: 1px solid #ffffff;
+  --checkmark-border: 1px solid hsl(0, 0%, 84%);
+  --checkmark-bg-color: #ffffff;
+  --checkedmark-border: 1px solid #ffffff0f;
+  --checkedmark-bg-color: #3c96ff;
 
-  --code-bg: #f1f6fb;  /*fully transferred*/
-  --code-font: 'Source Code Pro', 'Courier New', Courier, monospace;  /*fully transferred*/
-  --code-font-color: #333333;  /*fully transferred*/
-  --code-font-size: 1.0em;  /*fully transferred*/
-  --code-border: 1px solid #d5d8db;  /*fully transferred*/
+  --code-bg: #f1f6fb;
+  --code-font: 'Source Code Pro', 'Courier New', Courier, monospace;
+  --code-font-color: #333333;
+  --code-font-size: 1.0em;
+  --code-border: 1px solid #d5d8db;
 
-  --codemirror-bg: hsl(210, 53%, 98%);  /*fully transferred*/
-  --codemirror-border-color: #dadde1;  /*fully transferred*/
-  --codemirror-border-radius: 3px;  /*fully transferred*/
-  --codemirror-linenumber: #aaaeb5;  /*fully transferred*/
-  --code-matchingbracket-color: #f90;  /*fully transferred*/
+  --codemirror-bg: hsl(210, 53%, 98%);
+  --codemirror-border-color: #dadde1;
+  --codemirror-border-radius: 3px;
+  --codemirror-linenumber: #aaaeb5;
+  --code-matchingbracket-color: #f90;
 
   /* colors from corwsonkb's one-light-kat syntax */
-  --cm-comment: hsl(230, 0%, 44%);  /*fully transferred*/
-  --cm-def: hsl(41, 99%, 40%);  /*fully transferred*/
-  --cm-keyword: hsl(301, 66%, 43%);  /*fully transferred*/
-  --cm-callee: hsl(177, 72%, 47%);  /*fully transferred*/
-  --cm-operator: hsl(177, 72%, 47%);  /*fully transferred*/
-  --cm-builtin: hsl(177, 72%, 47%);  /*fully transferred*/
-  --cm-string: hsl(119, 37%, 50%);  /*fully transferred*/
-  --cm-variable-3: hsl(177, 72%, 47%);  /*fully transferred*/
-  --cm-variable-2: hsl(  5, 74%, 59%);  /*fully transferred*/
-  --cm-variable: hsl(53, 99%, 40%);  /*fully transferred*/
-  --cm-tag: hsl(  5, 74%, 59%);  /*fully transferred*/
-  --cm-property: hsl(221, 87%, 60%);  /*fully transferred*/
-  --cm-number: hsl(41, 94%, 48%);  /*fully transferred*/
-  --cm-atom: hsl(41, 94%, 48%);  /*fully transferred*/
-  --cm-qualifier: hsl(41, 94%, 48%);  /*fully transferred*/
+  --cm-comment: hsl(230, 0%, 44%);
+  --cm-def: hsl(41, 99%, 40%);
+  --cm-keyword: hsl(301, 66%, 43%);
+  --cm-callee: hsl(177, 72%, 47%);
+  --cm-operator: hsl(177, 72%, 47%);
+  --cm-builtin: hsl(177, 72%, 47%);
+  --cm-string: hsl(119, 37%, 50%);
+  --cm-variable-3: hsl(177, 72%, 47%);
+  --cm-variable-2: hsl(  5, 74%, 59%);
+  --cm-variable: hsl(53, 99%, 40%);
+  --cm-tag: hsl(  5, 74%, 59%);
+  --cm-property: hsl(221, 87%, 60%);
+  --cm-number: hsl(41, 94%, 48%);
+  --cm-atom: hsl(41, 94%, 48%);
+  --cm-qualifier: hsl(41, 94%, 48%);
 
-  --new-page-color: none;  /*fully transferred*/
+  --new-page-color: none;
 
-  --ref-count-font-size: 12px;  /*fully transferred*/
+  --ref-count-font-size: 12px;
 
   /* BACKGROUNDS & OUTLINES */
 
-  --body-bg: #ffffff;  /*fully transferred*/
-  --topbar-bg: none;  /*fully transferred*/
-  --topbar-border-bottom: none;  /*fully transferred*/
-  --left-sidebar-bg: #2e3234;  /*fully transferred*/
-  --left-sidebar-border-right: none;  /*fully transferred*/
-  --left-sidebar-divider-color: none;  /*fully transferred*/
-  --right-sidebar-bg: #ffffff;  /*fully transferred*/
+  --body-bg: #ffffff;
+  --topbar-bg: none;
+  --topbar-border-bottom: none;
+  --left-sidebar-bg: #2e3234;
+  --left-sidebar-border-right: none;
+  --left-sidebar-divider-color: none;
+  --right-sidebar-bg: #ffffff;
   --right-sidebar-border-left: 1px solid hsl(220, 9%, 93%); /* changed to 1px */
-  --divider-color: #cfcfcf;  /*fully transferred*/
-  --allpage-bottom-border-color: #ececec;  /*fully transferred*/
-  --reference-item-bg: #fdfdfd;  /*fully transferred*/
-  --reference-item-border-radius: 6px;  /*fully transferred*/
-  --reference-item-border: 1px solid #e6e6e68a;  /*fully transferred*/
+  --divider-color: #cfcfcf;
+  --allpage-bottom-border-color: #ececec;
+  --reference-item-bg: #fdfdfd;
+  --reference-item-border-radius: 6px;
+  --reference-item-border: 1px solid #e6e6e68a;
 
-  --block-highlight: #d8ecff;  /*fully transferred*/
-  --block-highlight-bg: #d3ffa4;  /*fully transferred*/
+  --block-highlight: #d8ecff;
+  --block-highlight-bg: #d3ffa4;
 
-  --popover-bg: #ffffff;  /*fully transferred*/
-  --popover-font-color: #282828;  /*fully transferred*/
+  --popover-bg: #ffffff;
+  --popover-font-color: #282828;
   --popover-border: 0.5px solid red; /* #UPDATE */
 
-  --inline-search-bg: #ffffff;  /*fully transferred*/
-  --inline-search-border-radius: 6px;  /*fully transferred*/
-  --inline-search-border: 1px solid #d1d1d1;  /*fully transferred*/
-  --inline-search-button-bg-color: #ffffff;  /*fully transferred*/
+  --inline-search-bg: #ffffff;
+  --inline-search-border-radius: 6px;
+  --inline-search-border: 1px solid #d1d1d1;
+  --inline-search-button-bg-color: #ffffff;
 
-  --datepicker-bg: var(--inline-search-bg);  /*fully transferred*/
-  --datepicker-day-wrapper: none;  /*fully transferred*/
+  --datepicker-bg: var(--inline-search-bg);
+  --datepicker-day-wrapper: none;
   --datepicker-altfont-color: #dadde0; /* #UPDATE */
 
-  --search-font-color: #282828;  /*fully transferred*/
-  --search-body-font-color: #e8e8e8;  /*fully transferred*/
-  --search-outline: hsl(212, 100%, 62%);  /*fully transferred*/
-  --search-bg: #ffffff;  /*fully transferred*/
-  --search-border-radius: 4px;  /*fully transferred*/
-  --search-selected-row: #f5f5f5;  /*fully transferred*/
+  --search-font-color: #282828;
+  --search-body-font-color: #e8e8e8;
+  --search-outline: hsl(212, 100%, 62%);
+  --search-bg: #ffffff;
+  --search-border-radius: 4px;
+  --search-selected-row: #f5f5f5;
 
-  --block-ref-bg: none;  /*fully transferred*/
-  --block-ref-hover: none;  /*fully transferred*/
-  --block-ref-hover-bg: #f6f9fb;  /*fully transferred*/
-  --block-ref-border-bottom: #d2dae3;  /*fully transferred*/
+  --block-ref-bg: none;
+  --block-ref-hover: none;
+  --block-ref-hover-bg: #f6f9fb;
+  --block-ref-border-bottom: #d2dae3;
 
   --pages-row-highlight: ; /* NEEDS LOVE */
-  --pages-header-row: #ffffff;  /*fully transferred*/
-  --pages-mentions-level-bg: #3c96ff;  /*fully transferred*/
-  --pages-mentions-level1-bg: #3d71ff;  /*fully transferred*/
-  --pages-mentions-level2-bg: #3c50ff;  /*fully transferred*/
-  --pages-mentions-font-color: #ffffff;  /*fully transferred*/
+  --pages-header-row: #ffffff;
+  --pages-mentions-level-bg: #3c96ff;
+  --pages-mentions-level1-bg: #3d71ff;
+  --pages-mentions-level2-bg: #3c50ff;
+  --pages-mentions-font-color: #ffffff;
 
-  --icon-color: #5c636b;  /*fully transferred*/
-  --icon-bg-hover: #ebebeb;  /*fully transferred*/
-  --icon-color-hover: #5c636b;  /*fully transferred*/
-  --minirightbar-icon-color: #cfcfcf;  /*fully transferred*/
+  --icon-color: #5c636b;
+  --icon-bg-hover: #ebebeb;
+  --icon-color-hover: #5c636b;
+  --minirightbar-icon-color: #cfcfcf;
 
   /* Misc */
-  --kanban-board-bg: #fafcfd;  /*fully transferred*/
-  --kanban-board-border: 1px solid #e6e6e6;  /*fully transferred*/
-  --kanban-board-border-radius: 10px;  /*fully transferred*/
+  --kanban-board-bg: #fafcfd;
+  --kanban-board-border: 1px solid #e6e6e6;
+  --kanban-board-border-radius: 10px;
 
-  --kanban-column-bg: #ecececdb;  /*fully transferred*/
-  --kanban-column-font-color: var(--main-font-color);  /*fully transferred*/
-  --kanban-column-margin: 4px 8px 0px 4px;  /*fully transferred*/
+  --kanban-column-bg: #ecececdb;
+  --kanban-column-font-color: var(--main-font-color);
+  --kanban-column-margin: 4px 8px 0px 4px;
 
-  --kanban-card-bg: #ffffff;  /*fully transferred*/
-  --kanban-card-font-color: var(--main-font-color);  /*fully transferred*/
-  --kanban-card-border-radius: 4px;  /*fully transferred*/
-  --kanban-card-border: 1px solid #dbdbdb;  /*fully transferred*/
+  --kanban-card-bg: #ffffff;
+  --kanban-card-font-color: var(--main-font-color);
+  --kanban-card-border-radius: 4px;
+  --kanban-card-border: 1px solid #dbdbdb;
 
-  --table-border: 1px solid #cacaca;  /*fully transferred*/
+  --table-border: 1px solid #cacaca;
 
   --astrolabe-bg-color: #f2f2f2;
 
-  --hr-color: #ccc;  /*fully transferred*/
+  --hr-color: #ccc;
 
-  --blockquote-font-color: #111111;  /*fully transferred*/
-  --blockquote-border-color: #07f;  /*fully transferred*/
-  --blockquote-bg: #ffffff;  /*fully transferred*/
-  --blockquote-cite: #000000;  /*fully transferred*/
+  --blockquote-font-color: #111111;
+  --blockquote-border-color: #07f;
+  --blockquote-bg: #ffffff;
+  --blockquote-cite: #000000;
 
-  --encrypted-font-color: #0077ffc4;  /*fully transferred*/
-  --encrypted-bg: hsl(212, 39%, 98%);  /*fully transferred*/
-  --encrypted-font-size: 13px;  /*fully transferred*/
-  --encrypted-font-weight: 300;  /*fully transferred*/
-  --encrypted-border-radius: 4px;  /*fully transferred*/
-  --encrypted-padding: 2px 4px;  /*fully transferred*/
+  --encrypted-font-color: #0077ffc4;
+  --encrypted-bg: hsl(212, 39%, 98%);
+  --encrypted-font-size: 13px;
+  --encrypted-font-weight: 300;
+  --encrypted-border-radius: 4px;
+  --encrypted-padding: 2px 4px;
 
-  --emoji-bg: #f0f7fd;  /*fully transferred*/
-  --emoji-border: 0px solid none;  /*fully transferred*/
-  --emoji-color: none;  /*fully transferred*/
+  --emoji-bg: #f0f7fd;
+  --emoji-border: 0px solid none;
+  --emoji-color: none;
 
-  --query-results-border: none;  /*fully transferred*/
-  --query-border: 1px solid #f8f1d2;  /*fully transferred*/
-  --query-border-radius: 6px;  /*fully transferred*/
-  --query-padding-bottom: 16px;  /*fully transferred*/
-  --query-title-font-color: #d0b944;  /*fully transferred*/
-  --query-title-bg: #fffced;  /*fully transferred*/
+  --query-results-border: none;
+  --query-border: 1px solid #f8f1d2;
+  --query-border-radius: 6px;
+  --query-padding-bottom: 16px;
+  --query-title-font-color: #d0b944;
+  --query-title-bg: #fffced;
 
 
   /* Scrollbar settings - to disable set values to none */
@@ -841,7 +841,7 @@ body {
   background-color: var(--inline-search-bg) !important;
   border-radius: var(--inline-search-border-radius);
   border: var(--inline-search-border);
-  box-shadow:0px 4px 22px #00000035;  /*fully transferred*/
+  box-shadow:0px 4px 22px #00000035;
 }
 .bp3-elevation-3 .dont-unfocus-block[style*="background-color: rgb(213, 218, 223);"],
 .bp3-popover-content .rm-menu-item[style*="background-color: rgb(213, 218, 223);"]  { /* selected row color */
