@@ -6,11 +6,12 @@ Colors by:  Cal Robert Lee
 Version:    v2.1.0
 Mirror:     https://github.com/garlicagreement/roam-css-styles/blob/master/Nox.css
 
-Updates:    - Added centered search popup using code from Azlen Elza's Zenith theme — code starts around line 1030
+Updates:    - Added centered search popup using code from Azlen Elza's Zenith theme — code starts around line 1174
             - Edited colors for almost all elements
             - Removed topbar
             - Cleaned up spacing in right sidebar
             - Cleaned up spacing in left bar
+            - Changed loading animation and page load animation
             - and more
 
 Notes:      - Thanks to the supportive people on r/RoamResearch
@@ -180,6 +181,8 @@ Notes:      - Thanks to the supportive people on r/RoamResearch
 
   --table-border: 1px solid #565656;
 
+  --astrolabe-bg-color: hsl(210, 6%, 20%);
+
   --hr-color: #434547;
 
   --blockquote-font-color: #ebebeb;
@@ -238,7 +241,7 @@ Notes:      - Thanks to the supportive people on r/RoamResearch
 
 /* !!!!! Un-comment the section below to maximize page width, line length, and images widths (grabbed from Jeff Harris's Railcast theme)  —— Just know it creates display issues in the graph! */
 
-/*
+
 .roam-block-container {
   max-width: 100% !important;
 }
@@ -260,7 +263,7 @@ div.roam-center > div:first-child {
 .hoverparent[style^="position: relative; width: 720px;"] {
   width: 100% !important;
 }
-*/
+
 
 /*                     END OF CONTENT PADDING & WIDTH                          */
 /* --------------------------------------------------------------------------- */
@@ -948,6 +951,150 @@ body {
 .rm-encrypted-block .rm-encrypted-passphrase {
   display: inline;
   cursor: pointer;
+}
+
+/* ------------------------*/
+/*    #LOADING ANIMATION   */
+/* ------------------------*/
+
+/* https://codepen.io/ivillamil/pen/dokmG */
+.loading-astrolabe {
+  height: 50px;
+  width: 50px;
+}
+
+.loading-astrolabe {
+  animation-name: rotate;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: normal;
+}
+
+.loading-astrolabe:before,
+.loading-astrolabe:after {
+  border-radius: 50%;
+  content: '';
+  display: block;
+  height: 20px;
+  width: 20px;
+}
+.loading-astrolabe:before {
+  animation: ball1 1s infinite;
+  background-color: var(--astrolabe-bg-color);
+  box-shadow: 30px 0 0 var(--astrolabe-bg-color);
+  margin-bottom: 10px;
+}
+.loading-astrolabe:after {
+  animation: ball2 1s infinite;
+  background-color: var(--astrolabe-bg-color);
+  box-shadow: 30px 0 0 var(--astrolabe-bg-color);
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg) scale(0.8);
+    -moz-transform: rotate(0deg) scale(0.8);
+  }
+  50% {
+    -webkit-transform: rotate(360deg) scale(1.2);
+    -moz-transform: rotate(360deg) scale(1.2);
+  }
+  100% {
+    -webkit-transform: rotate(720deg) scale(0.8);
+    -moz-transform: rotate(720deg) scale(0.8);
+  }
+}
+
+@keyframes ball1 {
+  0% {
+    box-shadow: 30px 0 0 var(--astrolabe-bg-color);
+  }
+  50% {
+    box-shadow: 0 0 0 var(--astrolabe-bg-color);
+    margin-bottom: 0;
+    -webkit-transform: translate(15px,15px);
+    -moz-transform: translate(15px, 15px);
+  }
+  100% {
+    box-shadow: 30px 0 0 var(--astrolabe-bg-color);
+    margin-bottom: 10px;
+  }
+}
+
+@keyframes ball2 {
+  0% {
+    box-shadow: 30px 0 0 var(--astrolabe-bg-color);
+  }
+  50% {
+    box-shadow: 0 0 0 var(--astrolabe-bg-color);
+    margin-top: -20px;
+    -webkit-transform: translate(15px,15px);
+    -moz-transform: translate(15px, 15px);
+  }
+  100% {
+    box-shadow: 30px 0 0 var(--astrolabe-bg-color);
+    margin-top: 0;
+  }
+}
+
+
+/*--- hides original ---*/
+.loading-astrolabe img {
+    display: none;
+}
+.bp3-spinner {
+    visibility: hidden;
+}
+.bp3-spinner > * {
+    visibility: visible;
+}
+.bp3-spinner-head {
+    stroke: rgb(var(--color-primary)) !important;
+}
+
+/* ------------------------*/
+/*     #ONLOAD FADE IN     */
+/* ------------------------*/
+
+.roam-body {
+    animation: fadein .3s;
+    -moz-animation: fadein .3s; /* Firefox */
+    -webkit-animation: fadein .3s; /* Safari and Chrome */
+    -o-animation: fadein .3s; /* Opera */
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 /* ------------------------*/
