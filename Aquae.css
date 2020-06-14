@@ -3,8 +3,10 @@
 Theme:      Roam Aquae Theme
 Edits by:   Cal Robert Lee (https://www.calrobert.com/)
 Colors by:  Cal Robert Lee
-Version:    v2.1.0
+Version:    v2.1.1
 Mirror:     https://github.com/garlicagreement/roam-css-styles/blob/master/Aquae.css
+
+Quickfix:   - Introduced hover state on left sidebar
 
 Updates:    - Added centered search popup using code from Azlen Elza's Zenith theme — code starts around line 1174
             - Edited colors for almost all elements
@@ -45,7 +47,7 @@ Notes:      - Thanks to the supportive people on r/RoamResearch
   --highlight-padding: 5px 5px 4px 5px;  /*fully transferred*/
   --reference-header-color: #d6eaff;  /*fully transferred*/
   --sidebar-font-color: #717171;  /*fully transferred*/
-  --sidebar-font-color-hover: #f5f8fa;  /*fully transferred*/
+  --sidebar-font-color-hover: #969696;  /*fully transferred*/
   --sidebar-hover-bg: none;  /*fully transferred*/
   --sidebar-font-hover-color: #f5f8fa;  /*fully transferred*/
   --sidebar-shorcut-color: #545454;  /*fully transferred*/
@@ -384,7 +386,7 @@ div.roam-center > div:first-child {
 /* edits top left main 3 buttons — HOVER STATE */
 .roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .log-button:hover {
   background-color: var(--left-sidebar-bg);
-  color: var(--sidebar-font-color);
+  color: var(--sidebar-font-color-hover);
   cursor:default; /* TRYING NO HOVER STATE */
 }
 /* hide left sidebar divider */
@@ -417,7 +419,7 @@ span.bp3-icon-small.bp3-icon-star {
 /* edits apperance of starred pages — HOVER STATE */
 .roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .starred-pages .page:hover {
   background-color: #0000;
-  color: var(--sidebar-font-color);
+  color: var(--sidebar-font-color-hover);
   cursor:default; /* TRYING NO HOVER STATE */
 
 }
