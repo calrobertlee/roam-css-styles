@@ -3,7 +3,7 @@
 Theme:      Roam Nox Theme
 Edits by:   Cal Robert Lee (https://www.calrobert.com/)
 Colors by:  Cal Robert Lee
-Version:    v2.1.0
+Version:    v2.1.2
 Mirror:     https://github.com/garlicagreement/roam-css-styles/blob/master/Nox.css
 
 Updates:    - Added centered search popup using code from Azlen Elza's Zenith theme — code starts around line 1174
@@ -11,7 +11,6 @@ Updates:    - Added centered search popup using code from Azlen Elza's Zenith th
             - Removed topbar
             - Cleaned up spacing in right sidebar
             - Cleaned up spacing in left bar
-            - Changed loading animation and page load animation
             - and more
 
 Notes:      - Thanks to the supportive people on r/RoamResearch
@@ -241,7 +240,7 @@ Notes:      - Thanks to the supportive people on r/RoamResearch
 
 /* !!!!! Un-comment the section below to maximize page width, line length, and images widths (grabbed from Jeff Harris's Railcast theme)  —— Just know it creates display issues in the graph! */
 
-
+/*
 .roam-block-container {
   max-width: 100% !important;
 }
@@ -263,7 +262,7 @@ div.roam-center > div:first-child {
 .hoverparent[style^="position: relative; width: 720px;"] {
   width: 100% !important;
 }
-
+*/
 
 /*                     END OF CONTENT PADDING & WIDTH                          */
 /* --------------------------------------------------------------------------- */
