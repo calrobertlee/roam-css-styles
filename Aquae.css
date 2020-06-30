@@ -3,7 +3,7 @@
 Theme:      Roam Aquae Theme
 Edits by:   Cal Robert Lee (https://www.calrobert.com/)
 Colors by:  Cal Robert Lee
-Version:    v2.1.4
+Version:    v2.1.5
 Mirror:     https://github.com/garlicagreement/roam-css-styles/blob/master/Aquae.css
 
 Quickfix:   - Added embed block bg color
@@ -850,7 +850,7 @@ body {
   box-shadow:0px 4px 22px #00000035;
 }
 .bp3-elevation-3 .dont-unfocus-block[style*="background-color: rgb(213, 218, 223);"],
-.bp3-popover-content .rm-menu-item[style*="background-color: rgb(213, 218, 223);"]  { /* selected row color */
+.bp3-popover-content .flex-v-box.rm-menu-item[style*="background-color: rgb(213, 218, 223);"]  { /* selected row color */
   background-color: var(--search-selected-row) !important;
 }
 .bp3-elevation-3 .dont-unfocus-block span[style*="color: rgb(129, 145, 157);"] { /* June 2020 added icons in popover menu */
