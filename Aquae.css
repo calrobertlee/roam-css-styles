@@ -3,10 +3,10 @@
 Theme:      Roam Aquae Theme
 Edits by:   Cal Robert Lee (https://www.calrobert.com/)
 Colors by:  Cal Robert Lee
-Version:    v2.1.3
+Version:    v2.1.4
 Mirror:     https://github.com/garlicagreement/roam-css-styles/blob/master/Aquae.css
 
-Quickfix:   - RoamResearch updated their loading animation from img to svg
+Quickfix:   - Added embed block bg color
 
 Updates:    - Added centered search popup using code from Azlen Elza's Zenith theme — code starts around line 1174
             - Edited colors for almost all elements
@@ -182,6 +182,8 @@ Notes:      - Thanks to the supportive people on r/RoamResearch
 
   --table-border: 1px solid #cacaca;
 
+  --embed-container-bg: #ecf2f8;
+
   --astrolabe-bg-color: #f2f2f2;
 
   --hr-color: #ccc;
@@ -242,7 +244,7 @@ Notes:      - Thanks to the supportive people on r/RoamResearch
 
 /* !!!!! Un-comment the section below to maximize page width, line length, and images widths (grabbed from Jeff Harris's Railcast theme)  —— Just know it creates display issues in the graph! */
 
-/*
+
 .roam-block-container {
   max-width: 100% !important;
 }
@@ -264,7 +266,7 @@ div.roam-center > div:first-child {
 .hoverparent[style^="position: relative; width: 720px;"] {
   width: 100% !important;
 }
-*/
+
 
 /*                     END OF CONTENT PADDING & WIDTH                          */
 /* --------------------------------------------------------------------------- */
@@ -487,6 +489,10 @@ span.bp3-icon-small.bp3-icon-star {
 /* BLOCK HIGHLIGHTING */
 .block-highlight-yellow {
     background-color: var(--block-highlight-bg);
+}
+/* EMBED BLOCK HIGHLIGHTING */
+.rm-embed-container {
+    background-color: var(--embed-container-bg);
 }
 
 /* ------------------------- */
