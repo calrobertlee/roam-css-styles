@@ -3,10 +3,10 @@
 Theme:      Roam Nox Theme
 Edits by:   Cal Robert Lee (https://www.calrobert.com/)
 Colors by:  Cal Robert Lee
-Version:    v2.1.5
+Version:    v2.1.6
 Mirror:     https://github.com/garlicagreement/roam-css-styles/blob/master/Nox.css
 
-Quickfix:   - Added embed block bg color
+Quickfix:   - Added embed block bg color & fixed search selected row color
 
 Updates:    - Added centered search popup using code from Azlen Elza's Zenith theme — code starts around line 1174
             - Edited colors for almost all elements
@@ -852,7 +852,7 @@ body {
     box-shadow: 0px 4px 22px #0d0f11a1;
 }
 .bp3-elevation-3 .dont-unfocus-block[style*="background-color: rgb(213, 218, 223);"],
-.bp3-popover-content .rm-menu-item[style*="background-color: rgb(213, 218, 223);"] {
+.bp3-popover-content .flex-v-box.rm-menu-item[style*="background-color: rgb(213, 218, 223);"] {
     /* selected row color */
     background-color: var(--search-selected-row) !important;
 }
