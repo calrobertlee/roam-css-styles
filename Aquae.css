@@ -3,10 +3,10 @@
 Theme:      Roam Aquae Theme
 Edits by:   Cal Robert Lee (https://www.calrobert.com/)
 Colors by:  Cal Robert Lee
-Version:    v2.1.5
+Version:    v2.1.6
 Mirror:     https://github.com/garlicagreement/roam-css-styles/blob/master/Aquae.css
 
-Quickfix:   - Added embed block bg color
+Quickfix:   - Highlight top padding
 
 Updates:    - Added centered search popup using code from Azlen Elza's Zenith theme — code starts around line 1174
             - Edited colors for almost all elements
@@ -44,7 +44,7 @@ Notes:      - Thanks to the supportive people on r/RoamResearch
   --highlight-font-color: #282828;
   --highlight-background-color: #fff1a4;
   --highlight-link-color: #0073f9;
-  --highlight-padding: 5px 5px 4px 5px;
+  --highlight-padding: 4px 5px 4px 5px;
   --reference-header-color: #d6eaff;
   --sidebar-font-color: #717171;
   --sidebar-font-color-hover: #969696;
