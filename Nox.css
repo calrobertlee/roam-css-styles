@@ -3,10 +3,10 @@
 Theme:      Roam Nox Theme
 Edits by:   Cal Robert Lee (https://www.calrobert.com/)
 Colors by:  Cal Robert Lee
-Version:    v2.1.7
+Version:    v2.1.8
 Mirror:     https://github.com/garlicagreement/roam-css-styles/blob/master/Nox.css
 
-Quickfix:   - Highlight top padding
+Quickfix:   - Repositioned "SHORTCUTS" in left sidebar
 
 Updates:    - Added centered search popup using code from Azlen Elza's Zenith theme — code starts around line 1174
             - Edited colors for almost all elements
@@ -408,7 +408,6 @@ span.bp3-icon-small.bp3-icon-star {
     font-size: 12px !important;
     font-weight: bold;
     margin-bottom: 8px;
-    margin-left: -10px;
 }
 /* edits apperance of starred pages */
 .roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .starred-pages .page {
