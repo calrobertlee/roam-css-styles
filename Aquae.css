@@ -248,10 +248,6 @@ Notes:      - Thanks to the supportive people on r/RoamResearch
 .roam-block-container {
   max-width: 100% !important;
 }
-div.roam-center > div:first-child {
-    padding-right: calc((100% - 950px) / 2) !important;
-    padding-left: calc((100% - 950px) / 2) !important;
-}
 .hoverparent[style^='position: relative; width: 500px;'] {
     width: 100% !important;
 }
