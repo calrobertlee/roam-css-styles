@@ -7,7 +7,7 @@ Version:    v2.1.9
 Mirror:     https://raw.githubusercontent.com/calrobertlee/roam-css-styles/master/Nox.css
 
 Quickfix:   - Repositioned "SHORTCUTS" in left sidebar
-            - Added bg color for inline select blocks (--block-input-bg-color; line 205)
+            - Added bg color for inline select blocks (line 205 & 1176ish)
 
 Updates:    - Added centered search popup using code from Azlen Elza's Zenith theme — code starts around line 1174
             - Edited colors for almost all elements
