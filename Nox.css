@@ -3,10 +3,11 @@
 Theme:      Roam Nox Theme
 Edits by:   Cal Robert Lee (https://www.calrobert.com/)
 Colors by:  Cal Robert Lee
-Version:    v2.1.8
-Mirror:     https://github.com/garlicagreement/roam-css-styles/blob/master/Nox.css
+Version:    v2.1.9
+Mirror:     https://raw.githubusercontent.com/calrobertlee/roam-css-styles/master/Nox.css
 
 Quickfix:   - Repositioned "SHORTCUTS" in left sidebar
+            - Added bg color for inline select blocks (--select-bg-color; line 205)
 
 Updates:    - Added centered search popup using code from Azlen Elza's Zenith theme — code starts around line 1174
             - Edited colors for almost all elements
@@ -200,6 +201,9 @@ Notes:      - Thanks to the supportive people on r/RoamResearch
     --encrypted-font-weight: 300;
     --encrypted-border-radius: 4px;
     --encrypted-padding: 2px 4px;
+    
+    --select-bg-color: #1E2022;
+    --select-border-color: #3a3f44;
 
     --emoji-bg: #1f2830;
     --emoji-border: 0px solid none;
@@ -1167,6 +1171,15 @@ blockquote small {
 #buffer {
     /* HIDES BOTTOM RIGHT HELP ICON */
     visibility: hidden;
+}
+
+/* Inline Select, thanks eatondpe for spotting this! */
+select {
+    background-color: var(--select-bg-color) !important;
+    border: 1px solid var(--select-border-color)!important;
+    border-radius: 4px;
+    padding: 1px 1px 2px 2px;
+    font-size: 0.95em;
 }
 
 .rm-emoji-button {
