@@ -315,6 +315,9 @@ div.roam-center > div:first-child {
 .rm-page-ref-link-color {
     color: var(--page-link-color);
 }
+.rm-page-ref-link-color strong{ /* bold link */
+    color: var(--page-link-color);
+}
 /* internal link hover state */
 .rm-page-ref-link-color:focus,
 .rm-page-ref-link-color:hover {
