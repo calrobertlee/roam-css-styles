@@ -375,7 +375,7 @@ div.roam-center > div:first-child {
 .roam-body .roam-app .roam-sidebar-container {
     background-color: var(--left-sidebar-bg);
     border-right: var(--left-sidebar-border-right);
-    z-index: -1; /* added to prevent from blocking search input */
+    z-index: 0; /* added to prevent from blocking search input */
 }
 /* adds padding to left sidebar contents */
 .roam-body .roam-app .roam-sidebar-container .roam-sidebar-content > div:nth-child(2) {
