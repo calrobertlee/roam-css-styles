@@ -199,10 +199,10 @@ Notes:      - Thanks to the supportive people on r/RoamResearch
   --encrypted-font-weight: 300;
   --encrypted-border-radius: 4px;
   --encrypted-padding: 2px 4px;
-    
+
   --select-bg-color: #fff;
   --select-border-color: #d5d5d5;
-            
+
   --emoji-bg: #f0f7fd;
   --emoji-border: 0px solid none;
   --emoji-color: none;
@@ -1399,13 +1399,13 @@ select {
 
 /* MOBILE & small screen for searchbar*/
 @media only screen and (max-width: 600px) {
-    
-    
+
+
     #find-or-create-input {
         max-width: calc(100% - 20px);
         left: 10px !important;
     }
-    
+
     .rm-find-or-create-wrapper .bp3-transition-container {
         position: fixed !important;
         max-width: calc(100vw - 20px);
