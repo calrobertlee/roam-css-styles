@@ -3,10 +3,10 @@
 Theme:      Roam Aquae Theme
 Edits by:   Cal Robert Lee (https://www.calrobert.com/)
 Colors by:  Cal Robert Lee
-Version:    v2.1.5
-Mirror:     https://github.com/garlicagreement/roam-css-styles/blob/master/Aquae.css
+Version:    v2.1.9
+Mirror:     https://raw.githubusercontent.com/calrobertlee/roam-css-styles/master/Aquae.css
 
-Quickfix:   - Added embed block bg color
+Quickfix:   - Fixed left sidebar z-index (to prevent from blocking search input)
 
 Updates:    - Added centered search popup using code from Azlen Elza's Zenith theme — code starts around line 1174
             - Edited colors for almost all elements
@@ -44,7 +44,7 @@ Notes:      - Thanks to the supportive people on r/RoamResearch
   --highlight-font-color: #282828;
   --highlight-background-color: #fff1a4;
   --highlight-link-color: #0073f9;
-  --highlight-padding: 5px 5px 4px 5px;
+  --highlight-padding: 4px 5px 4px 5px;
   --reference-header-color: #d6eaff;
   --sidebar-font-color: #717171;
   --sidebar-font-color-hover: #969696;
@@ -199,7 +199,10 @@ Notes:      - Thanks to the supportive people on r/RoamResearch
   --encrypted-font-weight: 300;
   --encrypted-border-radius: 4px;
   --encrypted-padding: 2px 4px;
-
+    
+  --select-bg-color: #fff;
+  --select-border-color: #d5d5d5;
+            
   --emoji-bg: #f0f7fd;
   --emoji-border: 0px solid none;
   --emoji-color: none;
@@ -372,6 +375,7 @@ div.roam-center > div:first-child {
 .roam-body .roam-app .roam-sidebar-container {
     background-color: var(--left-sidebar-bg);
     border-right: var(--left-sidebar-border-right);
+    z-index: -1; /* added to prevent from blocking search input */
 }
 /* adds padding to left sidebar contents */
 .roam-body .roam-app .roam-sidebar-container .roam-sidebar-content > div:nth-child(2) {
@@ -409,7 +413,6 @@ span.bp3-icon-small.bp3-icon-star {
   font-size: 12px !important;
   font-weight: bold;
   margin-bottom: 8px;
-  margin-left: -10px;
 }
 /* edits apperance of starred pages */
 .roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .starred-pages .page {
@@ -589,7 +592,6 @@ span.bp3-icon-small.bp3-icon-star {
 /* ------------------------*/
 
 .bp3-icon-calendar {
-  background: var(--tag-bg-color) !important;
   border: none;
 }
 /* modal padding */
@@ -1162,6 +1164,15 @@ blockquote .small, blockquote footer, blockquote small {
     visibility: hidden;
 }
 
+/* Inline Select, thanks eatondpe for spotting this! */
+select {
+  background-color: var(--select-bg-color) !important;
+  border: 1px solid var(--select-border-color)!important;
+  border-radius: 4px;
+  padding: 1px 1px 2px 2px;
+  font-size: 0.95em;
+}
+
 .rm-emoji-button {
   background-color: var(--emoji-bg) !important;
   border: var(--emoji-border) !important;
@@ -1313,7 +1324,7 @@ blockquote .small, blockquote footer, blockquote small {
 #find-or-create-input {
     border-radius: 3px 3px 0px 0px; /* CRL EDIT */
     border: 1px solid #c6c6c6; /* CRL EDIT */
-    box-shadow: 0 0 0 100VW rgba(0, 0, 0, .07); /* CRL EDIT */
+    box-shadow: 0 0 0 200VH rgba(0, 0, 0, .07);
     font-size: 18px;
     padding: 20px 20px;
     z-index: 10000;
@@ -1384,4 +1395,25 @@ blockquote .small, blockquote footer, blockquote small {
 /* HOT FIXES */
 .zoom-path-view .rm-zoom-mask {
     background-color: #fff0;
+}
+
+/* MOBILE & small screen for searchbar*/
+@media only screen and (max-width: 600px) {
+    
+    
+    #find-or-create-input {
+        max-width: calc(100% - 20px);
+        left: 10px !important;
+    }
+    
+    .rm-find-or-create-wrapper .bp3-transition-container {
+        position: fixed !important;
+        max-width: calc(100vw - 20px);
+        top: 152px !important;
+        left: 10px !important;
+    }
+
+    .rm-find-or-create-wrapper .bp3-transition-container {
+    transform: none !important;
+}
 }
