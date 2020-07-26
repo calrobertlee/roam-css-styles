@@ -3,10 +3,10 @@
 Theme:      Roam Nox Theme
 Edits by:   Cal Robert Lee (https://www.calrobert.com/)
 Colors by:  Cal Robert Lee
-Version:    v2.2.0
+Version:    v2.2.1
 Mirror:     https://raw.githubusercontent.com/calrobertlee/roam-css-styles/master/Nox.css
 
-Quickfix:   - Fixed left sidebar z-index (to prevent from blocking search input)
+Quickfix:   - left sidebar "Shortcuts" header reposition
 
 Updates:    - Added centered search popup using code from Azlen Elza's Zenith theme — code starts around line 1174
             - Edited colors for almost all elements
@@ -182,7 +182,7 @@ Notes:      - Thanks to the supportive people on r/RoamResearch
     --kanban-card-border: 1px solid #323539;
 
     --table-border: 1px solid #565656;
-
+    
     --embed-container-bg: hsl(213, 9%, 20%);
 
     --astrolabe-bg-color: hsl(210, 6%, 20%);
@@ -200,7 +200,7 @@ Notes:      - Thanks to the supportive people on r/RoamResearch
     --encrypted-font-weight: 300;
     --encrypted-border-radius: 4px;
     --encrypted-padding: 2px 4px;
-
+    
     --select-bg-color: #1E2022;
     --select-border-color: #3a3f44;
 
@@ -248,6 +248,8 @@ Notes:      - Thanks to the supportive people on r/RoamResearch
 }
 
 /* !!!!! Un-comment the section below to maximize page width, line length, and images widths (grabbed from Jeff Harris's Railcast theme)  —— Just know it creates display issues in the graph! */
+
+/*
 .roam-block-container {
     max-width: 100% !important;
 }
@@ -269,7 +271,7 @@ div.roam-center > div:first-child {
 .hoverparent[style^="position: relative; width: 720px;"] {
     width: 100% !important;
 }
-
+*/
 
 /*                     END OF CONTENT PADDING & WIDTH                          */
 /* --------------------------------------------------------------------------- */
@@ -415,6 +417,7 @@ span.bp3-icon-small.bp3-icon-star {
     font-size: 12px !important;
     font-weight: bold;
     margin-bottom: 8px;
+    margin-left: -10px;
 }
 /* edits apperance of starred pages */
 .roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .starred-pages .page {
@@ -1343,7 +1346,7 @@ select {
 #find-or-create-input {
     border-radius: 3px 3px 0px 0px;
     border: 1px solid #3e3e3e;
-    box-shadow: 0 0 0 100VH rgba(15, 15, 15, 0.3); /* Changed from 100VW to 100VH */
+    box-shadow: 0 0 0 200VW rgba(15, 15, 15, 0.3);
     font-size: 18px;
     padding: 20px 20px;
     z-index: 10000;
@@ -1415,13 +1418,13 @@ select {
 
 /* MOBILE & small screen for searchbar*/
 @media only screen and (max-width: 600px) {
-
-
+    
+    
     #find-or-create-input {
         max-width: calc(100% - 20px);
         left: 10px !important;
     }
-
+    
     .rm-find-or-create-wrapper .bp3-transition-container {
         position: fixed !important;
         max-width: calc(100vw - 20px);

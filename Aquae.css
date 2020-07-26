@@ -3,10 +3,10 @@
 Theme:      Roam Aquae Theme
 Edits by:   Cal Robert Lee (https://www.calrobert.com/)
 Colors by:  Cal Robert Lee
-Version:    v2.1.9
+Version:    v2.2.0
 Mirror:     https://raw.githubusercontent.com/calrobertlee/roam-css-styles/master/Aquae.css
 
-Quickfix:   - Fixed left sidebar z-index (to prevent from blocking search input)
+Quickfix:   - left sidebar "Shortcuts" header reposition
 
 Updates:    - Added centered search popup using code from Azlen Elza's Zenith theme — code starts around line 1174
             - Edited colors for almost all elements
@@ -119,7 +119,7 @@ Notes:      - Thanks to the supportive people on r/RoamResearch
   --left-sidebar-border-right: none;
   --left-sidebar-divider-color: none;
   --right-sidebar-bg: #ffffff;
-  --right-sidebar-border-left: 1px solid hsl(220, 9%, 93%); /* changed to 1px */
+  --right-sidebar-border-left: 2px solid hsl(220, 9%, 95%);
   --divider-color: #cfcfcf;
   --allpage-bottom-border-color: #ececec;
   --reference-item-bg: #fdfdfd;
@@ -199,10 +199,10 @@ Notes:      - Thanks to the supportive people on r/RoamResearch
   --encrypted-font-weight: 300;
   --encrypted-border-radius: 4px;
   --encrypted-padding: 2px 4px;
-
+    
   --select-bg-color: #fff;
   --select-border-color: #d5d5d5;
-
+            
   --emoji-bg: #f0f7fd;
   --emoji-border: 0px solid none;
   --emoji-color: none;
@@ -246,7 +246,7 @@ Notes:      - Thanks to the supportive people on r/RoamResearch
 }
 
 /* !!!!! Un-comment the section below to maximize page width, line length, and images widths (grabbed from Jeff Harris's Railcast theme)  —— Just know it creates display issues in the graph! */
-
+/*
 
 .roam-block-container {
   max-width: 100% !important;
@@ -269,7 +269,7 @@ div.roam-center > div:first-child {
 .hoverparent[style^="position: relative; width: 720px;"] {
   width: 100% !important;
 }
-
+*/
 
 /*                     END OF CONTENT PADDING & WIDTH                          */
 /* --------------------------------------------------------------------------- */
@@ -317,25 +317,25 @@ div.roam-center > div:first-child {
 
 /* INTERNAL PAGE LINK color */
 .rm-page-ref-link-color {
-    color: var(--page-link-color);
+  color: var(--page-link-color);
 }
 .rm-page-ref-link-color strong{ /* bold link */
-    color: var(--page-link-color);
+  color: var(--page-link-color);
 }
 /* internal link hover state */
 .rm-page-ref-link-color:focus,
 .rm-page-ref-link-color:hover {
-    color: var(--page-link-color);
-    text-decoration: none; /* EXPERIMENTING WITH HOVER STATE */
+  color: var(--page-link-color);
+  text-decoration: none; /* EXPERIMENTING WITH HOVER STATE */
 }
 /* BRACKETS COLOR */
 .rm-page-ref-brackets {
-    color: var(--page-bracket-color);
+  color: var(--page-bracket-color);
 }
 /* EXTERNAL LINK color */
 .roam-app a {
-    color: var(--external-link-color);
-    text-decoration: none; /* EXPERIMENTING WITH HOVER STATE */
+  color: var(--external-link-color);
+  text-decoration: none; /* EXPERIMENTING WITH HOVER STATE */
 }
 /* EXTERNAL LINK color — HOVER STATE */
 .roam-app a:focus,
@@ -416,6 +416,7 @@ span.bp3-icon-small.bp3-icon-star {
   font-size: 12px !important;
   font-weight: bold;
   margin-bottom: 8px;
+  margin-left: -10px;
 }
 /* edits apperance of starred pages */
 .roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .starred-pages .page {
@@ -1402,13 +1403,13 @@ select {
 
 /* MOBILE & small screen for searchbar*/
 @media only screen and (max-width: 600px) {
-
-
+    
+    
     #find-or-create-input {
         max-width: calc(100% - 20px);
         left: 10px !important;
     }
-
+    
     .rm-find-or-create-wrapper .bp3-transition-container {
         position: fixed !important;
         max-width: calc(100vw - 20px);
