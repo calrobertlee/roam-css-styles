@@ -1,5 +1,7 @@
 # Cal Robert's Roam Themes
 
+- Update: Introduction of 3rd theme, Luna — a high contrast dark theme
+
 - Minimal aestheic with highly refined color palettes
 - Removed topbar for more space (shifted to right vertical bar)
 - Centered search bar (using a bit of magic found in Azlen's Zenith theme)
@@ -16,3 +18,7 @@ This process can take about 20-30 seconds so please be patient!
 ## Nox
 `@import url('https://calrobertlee.github.io/roam-themes/nox.css');`
 ![](https://raw.githubusercontent.com/garlicagreement/roam-css-styles/master/Images/Nox2%20Screenshot.png)
+
+## Luna
+`@import url('https://calrobertlee.github.io/roam-themes/luna.css');`
+![](https://raw.githubusercontent.com/garlicagreement/roam-css-styles/master/Images/Luna%20Screenshot.png)
