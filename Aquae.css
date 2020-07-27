@@ -1205,7 +1205,9 @@ select {
 .roam-body-main.flex-h-box[style*="height: calc(100% - 45px);"] {
   height: calc(100% + 45px) !important;
 }
-
+.rm-saving-icon { /* fix sync/saving position */
+  margin-left: -1px;
+}
 
 /* --------------------------------------------------------------------------------*/
 /*     CODE BELOW FROM AZLEN ELZA's ZENITH THEME — ADDS CENTERED SEARCH            */

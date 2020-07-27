@@ -1220,6 +1220,9 @@ select {
 .zoom-path-view .rm-zoom-mask {
     background-color: #fff0;
 }
+.rm-saving-icon { /* fix sync/saving position */
+    margin-left: -1px;
+}
 
 /* --------------------------------------------------------------------------------*/
 /*     CODE BELOW FROM AZLEN ELZA's ZENITH THEME — ADDS CENTERED SEARCH            */
