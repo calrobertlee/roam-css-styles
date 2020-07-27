@@ -1,0 +1,1422 @@
+/*
+
+Theme:      Roam Lux Theme
+Edits by:   Cal Robert Lee (https://www.calrobert.com/)
+Colors by:  Cal Robert Lee
+Version:    v1.1.2
+Import:    @import url('https://calrobertlee.github.io/roam-themes/lux.css');
+
+Updates:    - Release of higher contrast dark theme
+
+Notes:      - Thanks to the supportive people on r/RoamResearch
+            - Started learning programming and CSS last month so please excuse if it's a bit messy
+            - Super excited to have been selected to be on RoamResearch's Official theme's page!
+            - For easy installation, create a page titled roam/css in RoamResearch and copy this code in
+
+*/
+:root {
+    /* PRIMARY FONTS */
+    --main-font: 'Inter', sans-serif;
+    --main-font-color: #d9d9d9;
+    --main-font-size: 1.0em;
+
+    /* FONT COLORS */
+    --page-link-color: #87ddf7;
+    --page-bracket-color: #5B5B5B;
+    --external-link-color: #87ddf7;
+    --daily-notes-link-color: none;
+    --sidebar-link-color: none;
+    --h1-font-color: #c9d1d9;
+    --h2-font-color: none;
+    --h3-font-color: #56555b;
+    --strong: #DCDEDD;
+    --emphasis: #DCDEDD;
+    --highlight-font-color: #F4F4F4;
+    --highlight-background-color: #7a5e23;
+    --highlight-link-color: #F4F4F4;
+    --highlight-padding: 4px 5px 4px 5px;
+    --reference-header-color: #2a323a;
+    --sidebar-font-color: #696969;
+    --sidebar-font-color-hover: #8f8f8f;
+    --sidebar-hover-bg: none;
+    --sidebar-font-hover-color: #8f8f8f;
+    --sidebar-shorcut-color: #9f9f9f52;
+
+    --tag-font-color: #5a5d5e;
+    --tag-bg-color: #222526;
+    --tag-border-radius: 10px;
+    --tag-border: 1px solid #383c3d96;
+    --tag-padding: 1px 5px 2px;
+    --tagHover-font-color: #595d5f;
+    --tagHover-bg-color: #2e3233;
+    --tagHover-border: 1px solid #43464787;
+
+    --bullet-color: #dedede;
+    --bullet-closed: #9de4fa4a;
+    --tree-vertline: 2px solid hsl(194, 7%, 16%);
+    --bullet-position: ;     /*not needed for now*/
+    --checkmark-top: -1px;
+    --checkmark-left: -2px;
+    --checkmarl-height: 14px;
+    --checkmark-width: 14px;
+    --checkmark-border-radius: 4px;
+    --checkmark-color: solid hsl(210, 6%, 8%);
+    --checkmark-border: 1px solid hsl(207, 6%, 34%);
+    --checkmark-bg-color: rgb(27, 29, 30);
+    --checkedmark-border: 1px solid #4d525600;
+    --checkedmark-bg-color: hsl(194, 90%, 80%);
+
+    --code-bg: hsl(209, 9%, 17%);
+    --code-font: 'Source Code Pro', 'Courier New', Courier, monospace;
+    --code-font-color: #DCDEDD;
+    --code-font-size: 1.0em;
+    --code-border: 1px solid hsl(214, 6%, 25%);
+
+    --codemirror-bg: #222629;
+    --codemirror-border-color: #323438;
+    --codemirror-border-radius: 3px;
+    --codemirror-linenumber: #515355;
+    --code-matchingbracket-color: #ead64c;
+
+    /* colors from Atom's One Dark syntax highlighting */
+    --cm-comment: #7f848e;
+    --cm-def: #d19a66;
+    --cm-keyword: #c678dd;
+    --cm-callee: #56b6c2;
+    --cm-operator: #56b6c2;
+    --cm-builtin: #56b6c2;
+    --cm-string: #98c379;
+    --cm-variable-3: #56b6c2;
+    --cm-variable-2: #e06c75;
+    --cm-variable: #e5c07b;
+    --cm-tag: #e06c75;
+    --cm-property: #61afef;
+    --cm-number: #d19a66;
+    --cm-atom: #d19a66;
+    --cm-qualifier: #d19a66;
+
+    --new-page-color: none;
+
+    --ref-count-font-size: 12px;
+
+    /* BACKGROUNDS & OUTLINES */
+    --body-bg: #1c1c1c; /* DONE */
+    --topbar-bg: rgba(30, 32, 34, 0);
+    --topbar-border-bottom: 0px solid #32343880;
+    --left-sidebar-bg: #161616;
+    --left-sidebar-border-right: 0px solid rgb(54, 56, 60);
+    --left-sidebar-divider-color: #45474a00;
+    --right-sidebar-bg: #1c1c1c;
+    /*#1E2022*/
+    --right-sidebar-border-left: 2px solid hsla(220, 6%, 5%, .31);
+    --divider-color: #43474a;
+    --allpage-bottom-border-color: #2d3133;
+
+    --reference-item-bg: hsl(194, 3%, 12%);
+    --reference-item-border-radius: 6px;
+    --reference-item-border: 1px solid hsl(194, 0%, 18%);
+
+    --block-highlight: hsl(213, 9%, 19%);
+    --block-highlight-bg: #34641F;
+
+    --popover-bg: #2c2e31;
+    --popover-font-color: #DCDEDD;
+    --popover-border: 0.5px solid rgb(70, 73, 77);
+
+    --inline-search-bg: #252628;
+    --inline-search-border-radius: 6px;
+    --inline-search-border: 1px solid #46494d;
+    --inline-search-button-bg-color: #242628;
+
+    --datepicker-bg: var(--inline-search-bg);
+    --datepicker-day-wrapper: #36393c;
+    --datepicker-altfont-color: #545d63;
+
+    --search-font-color: #DCDEDD;
+    --search-body-font-color: #DCDEDD;
+    --search-outline: #1e6897;
+    --search-bg: #27292d;
+    --search-border-radius: 3px;
+    --search-selected-row: #2c2d30;
+
+    --block-ref-bg: none;
+    --block-ref-hover: none;
+    --block-ref-hover-bg: hsl(194, 9%, 23%);
+    --block-ref-border-bottom: #393d42;
+
+    --pages-header-row: #1E2022;
+    --pages-mentions-level-bg: #3c96ff;
+    --pages-mentions-level1-bg: #3d71ff;
+    --pages-mentions-level2-bg: #3c50ff;
+    --pages-mentions-font-color: #DCDEDD;
+
+    --icon-color: #7d8386;
+    --icon-bg-hover: #dadfe61c;
+    --icon-color-hover: #dae0e4;
+    --minirightbar-icon-color: #454d52;
+
+    /* Misc */
+    --kanban-board-bg: #212326;
+    --kanban-board-border: 1px solid #32343880;
+    --kanban-board-border-radius: 10px;
+
+    --kanban-column-bg: #272a2d;
+    --kanban-column-font-color: var(--main-font-color);
+    --kanban-column-margin: 4px 8px 0px 4px;
+
+    --kanban-card-bg: #1E2022;
+    --kanban-card-font-color: var(--main-font-color);
+    --kanban-card-border-radius: 4px;
+    --kanban-card-border: 1px solid #323539;
+
+    --table-border: 1px solid #565656;
+    
+    --embed-container-bg: #2c3035;
+
+    --astrolabe-bg-color: #242729;
+
+    --hr-color: #434547;
+
+    --blockquote-font-color: #ebebeb;
+    --blockquote-border-color: #5bd8ff;
+    --blockquote-bg: #1E2022;
+    --blockquote-cite: #ebebeb;
+
+    --encrypted-font-color: hsl(194, 35%, 52%);
+    --encrypted-bg: hsl(212, 14%, 15%);
+    --encrypted-font-size: 13px;
+    --encrypted-font-weight: 300;
+    --encrypted-border-radius: 4px;
+    --encrypted-padding: 2px 4px;
+    
+    --select-bg-color: #1E2022;
+    --select-border-color: #3a3f44;
+
+    --emoji-bg: #1f2830;
+    --emoji-border: 0px solid none;
+    --emoji-color: none;
+
+    --query-results-border: none;
+    --query-border: 1px solid #3e3b28a8;
+    --query-border-radius: 6px;
+    --query-padding-bottom: 16px;
+    --query-title-font-color: #d0b94482;
+    --query-title-bg: #3d381e8f;
+
+
+    /* Scrollbar settings - to disable set values to none */
+    --scrollbar-track: true;
+    --scrollbar-thumb: ;
+}
+
+/* --------------------------------------------------------------------------- */
+/*                      CONTENT PADDING & WIDTH                                */
+#rm-log-container {
+    /* daily notes center aligned */
+    padding-right: calc((100% - 900px) / 2) !important;
+    padding-left: calc((100% - 900px) / 2) !important;
+    height: 100% !important;
+    overflow: hidden scroll !important;
+}
+.roam-body .roam-app .roam-main {
+    width: 100%;
+    display: flex;
+}
+.roam-body .roam-app .roam-main .roam-article {
+    position: relative;
+    padding: 16px 42px 120px;
+}
+.roam-body .roam-app .roam-main .roam-article .rm-title-display {
+    margin-bottom: 32px;
+}
+.rm-block-text {
+    /*max-width: 1100px;*/
+    max-width: 100%;
+    /* make references as wide as possible3 */
+}
+
+/* !!!!! Un-comment the section below to maximize page width, line length, and images widths (grabbed from Jeff Harris's Railcast theme)  —— Just know it creates display issues in the graph! */
+/*
+.roam-block-container {
+    max-width: 100% !important;
+}
+div.roam-center > div:first-child {
+    padding-right: calc((100% - 950px) / 2) !important;
+    padding-left: calc((100% - 950px) / 2) !important;
+}
+.hoverparent[style^='position: relative; width: 500px;'] {
+    width: 100% !important;
+}
+.hoverparent .react-resizable[style^='width: 500px;'] {
+    width: 100% !important;
+}
+.react-resizable[style^='width: 580px;'],
+.react-resizable[style^='width: 720px;'] {
+    width: 100% !important;
+}
+.hoverparent[style^="position: relative; width: 580px;"],
+.hoverparent[style^="position: relative; width: 720px;"] {
+    width: 100% !important;
+}
+*/
+
+/*                     END OF CONTENT PADDING & WIDTH                          */
+/* --------------------------------------------------------------------------- */
+/* -------------------------- */
+/*        #FONT COLORS        */
+/* -------------------------- */
+/* MAIN BODY TEXT COLOR */
+.roam-app {
+    color: var(--main-font-color) !important;
+}
+/* H1 COLOR */
+.roam-body .roam-app h1 {
+    color: var(--h1-font-color);
+}
+/* H2 */
+.rm-level2 {
+    /* font-family: 'Inter', sans-serif !important; */
+    font-weight: 400;
+    font-size: 1.3em;
+    font-family: var(--main-font);
+    color: var(--h2-font-color);
+    /* margin-top: -5px !important; */
+}
+/* H3 */
+.rm-level3 {
+    font-weight: 400;
+    font-size: 1.2em;
+    font-family: var(--main-font);
+    color: var(--h3-font-color);
+}
+/* BOLD TEXT */
+.roam-app strong {
+    color: var(--strong);
+}
+.roam-app em {
+    color: var(--emphasis);
+}
+
+/* -------------------------- */
+/*           #LINKS           */
+/* -------------------------- */
+/* INTERNAL PAGE LINK color */
+.rm-page-ref-link-color {
+    color: var(--page-link-color);
+}
+/* internal link hover state */
+.rm-page-ref-link-color:focus,
+.rm-page-ref-link-color:hover {
+    color: var(--page-link-color);
+    text-decoration: underline;
+}
+/* BRACKETS COLOR */
+.rm-page-ref-brackets {
+    color: var(--page-bracket-color);
+}
+/* EXTERNAL LINK color */
+.roam-app a {
+    color: var(--external-link-color);
+    /* EXPERIMENTING WITH HOVER STATE */
+}
+/* EXTERNAL LINK color — HOVER STATE */
+.roam-app a:focus,
+.roam-app a:hover {
+    color: var(--external-link-color);
+}
+
+/* TRYING TO ISOLATE URLs and NOT PAGE HEADERS */
+.roam-app a:hover[style*="font-size: 14px;"] {
+    color: var(--external-link-color);
+    text-decoration: underline;
+    /* EXPERIMENTING WITH HOVER STATE */
+}
+
+
+/* -------------------------- */
+/*        #REFERENCES         */
+/* -------------------------- */
+/* "Linked/Unlinked References" reference block header */
+.flex-h-box > div:nth-child(3) strong {
+    color: var(--reference-header-color);
+}
+/* "Linked/Unlinked References" reference block header */
+.flex-h-box strong[style*="color: rgb(206, 217, 224);"] {
+    color: var(--reference-header-color) !important;
+}
+.flex-h-box > div:nth-child(0) strong {
+    color: var(--main-font-color) !important;
+}
+/* Right sidebar bold links color */
+#right-sidebar .flex-h-box > div:nth-child(2) strong {
+    color: var(--main-font-color);
+}
+
+/* -------------------------- */
+/*        #LEFT SIDEBAR       */
+/* -------------------------- */
+/* left sidebar color */
+.roam-body .roam-app .roam-sidebar-container {
+    background-color: var(--left-sidebar-bg);
+    border-right: var(--left-sidebar-border-right);
+    z-index: 0; /* added to prevent from blocking search input */
+}
+/* adds padding to left sidebar contents */
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content > div:nth-child(2) {
+    padding-top: 10px;
+}
+/* edits top left main 3 buttons */
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .log-button {
+    font-weight: 500;
+    font-size: 13px;
+    padding: 6px 20px;
+    color: var(--sidebar-font-color);
+    cursor: default;
+    /* TRYING NO HOVER STATE */
+}
+/* edits top left main 3 buttons — HOVER STATE */
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .log-button:hover {
+    background-color: var(--left-sidebar-bg);
+    color: var(--sidebar-font-color-hover);
+    cursor: default;
+    /* TRYING NO HOVER STATE */
+}
+/* hide left sidebar divider */
+.flex-v-box.starred-pages-wrapper > div:nth-child(1) {
+    background-color: var(--left-sidebar-divider-color) !important;
+}
+
+/* edits "SHORTCUTS" subheader color */
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper {
+    color: var(--sidebar-shorcut-color);
+}
+/* hides star icon */
+span.bp3-icon-small.bp3-icon-star {
+    visibility: hidden;
+}
+/* "SHORTCUTS" dimension edits */
+.flex-v-box.starred-pages-wrapper span {
+    font-size: 12px !important;
+    font-weight: bold;
+    margin-bottom: 8px;
+    margin-left: -10px;
+}
+/* edits apperance of starred pages */
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .starred-pages .page {
+    color: var(--sidebar-font-color);
+    padding: 4px 0px 8px 0px;
+    cursor: default;
+    /* TRYING NO HOVER STATE */
+}
+/* edits apperance of starred pages — HOVER STATE */
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .starred-pages .page:hover {
+    background-color: #0000;
+    color: var(--sidebar-font-color-hover);
+    cursor: default;
+}
+
+/* ---------------------------*/
+/*        #RIGHT SIDEBAR      */
+/* ---------------------------*/
+/* right sidebar color */
+#right-sidebar {
+    background-color: var(--right-sidebar-bg) !important;
+    border-left: var(--right-sidebar-border-left);
+}
+#right-sidebar {
+    padding-right: 55px;
+}
+/* sidebar spacing */
+#roam-right-sidebar-content {
+    margin-top: -50px;
+    padding: 40px 0px 0px 30px;
+}
+/* hides close sidebard button */
+#right-sidebar > div:nth-child(1) {
+    visibility: hidden;
+}
+/* right sidebar divider padding and margin */
+#roam-right-sidebar-content > * {
+    margin: 0px 0px 0 20px !important;
+    padding: 15px 0px 10px 0px;
+}
+/* right sidebar divider apperance */
+#roam-right-sidebar-content [style*="border-bottom: 1px solid rgb(138, 155, 168);"] {
+    border-bottom: 1px solid var(--divider-color) !important;
+}
+/* header for sidebar page OPENED — moves it left 35px */
+#roam-right-sidebar-content .flex-h-box .bp3-button.bp3-minimal.bp3-icon-minus.bp3-small {
+    margin-left: -35px;
+    margin-right: 10px;
+}
+/* header for sidebar page COLLAPSED — moves it right */
+#roam-right-sidebar-content .flex-h-box .bp3-button.bp3-minimal.bp3-icon-plus.bp3-small {
+    margin-left: -35px;
+    margin-right: 20px;
+}
+
+/* ------------------------------- */
+/*    #TEXT & BLOCK #HIGHLIGHTS    */
+/* ------------------------------- */
+/* text highlighting */
+.roam-highlight {
+    background-color: var(--highlight-background-color);
+    color: var(--highlight-font-color);
+    border-radius: 0px;
+    padding: var(--highlight-padding);
+}
+/* INTERNAL PAGE LINK TEXT COLOR */
+.roam-highlight .rm-page-ref-link-color {
+    color: var(--highlight-link-color);
+}
+/* BLOCK SELECTION HIGHLIGHTING */
+.block-highlight-blue {
+    background-color: var(--block-highlight);
+}
+/* BLOCK HIGHLIGHTING */
+.block-highlight-yellow {
+    background-color: var(--block-highlight-bg);
+}
+/* EMBED BLOCK HIGHLIGHTING */
+.rm-embed-container {
+    background-color: var(--embed-container-bg);
+}
+
+/* ------------------------- */
+/*           #TAGS           */
+/* ------------------------- */
+/* TAG */
+.rm-page-ref-tag {
+    color: var(--tag-font-color)!important;
+    font-weight: 400;
+    background-color: var(--tag-bg-color);
+    border-radius: var(--tag-border-radius);
+    border: var(--tag-border);
+    padding: var(--tag-padding);
+}
+/* TAG HOVER */
+.rm-page-ref-tag:hover {
+    color: var(--tagHover-font-color) !important;
+    font-weight: 400;
+    background-color: var(--tagHover-bg-color);
+    border-radius: var(--tag-border-radius);
+    border: var(--tagHover-border);
+    padding: var(--tag-padding);
+    text-decoration: none;
+}
+
+/* ----------------------- */
+/*     #BULLETS & #TREE    */
+/* ------------------------*/
+/* BULLET */
+.controls .simple-bullet-outer .simple-bullet-inner {
+    border-radius: 50%;
+    width: 5px;
+    height: 5px;
+    background-color: var(--bullet-color);
+}
+/* COLLAPSED BULLET */
+.roam-bullet-closed {
+    background-color: var(--bullet-closed);
+    width: 16px;
+    border: 1px solid #62a7f52b;
+}
+/* RIGHT SIDEBAR COLLAPSED BULLET */
+#right-sidebar .roam-bullet-closed {
+    background-color: var(--bullet-closed);
+}
+/* TREE LINE */
+.block-border-left {
+    border-left: var(--tree-vertline);
+}
+
+/* ------------------------*/
+/*          #TODO          */
+/* ------------------------*/
+/* TODO */
+.checkmark {
+    position: absolute;
+    top: var(--checkmark-top);
+    left: var(--checkmark-left);
+    height: var(--checkmarl-height);
+    border-radius: var(--checkmark-border-radius);
+    width: var(--checkmark-width);
+    border: var(--checkmark-border);
+    background-color: var(--checkmark-bg-color);
+}
+/* DONE */
+.check-container input:checked ~ .checkmark {
+    position: absolute;
+    top: var(--checkmark-top);
+    left: var(--checkmark-left);
+    height: var(--checkmarl-height);
+    border-radius: var(--checkmark-border-radius);
+    width: var(--checkmark-width);
+    border: var(--checkedmark-border);
+    background-color: var(--checkedmark-bg-color);
+}
+/* DONE CHECK SYMBOL */
+.check-container .checkmark:after {
+    left: 3.5px;
+    top: 0.25px;
+    width: 6px;
+    height: 10px;
+    border: var(--checkmark-color);
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(40deg) scale(0.8);
+}
+
+/* ------------------------*/
+/*        #DATEPICKER      */
+/* ------------------------*/
+.bp3-icon-calendar {
+    background: var(--sidebar-bg-color) !important;
+    border: var(--sidebar-bg-color);
+}
+/* modal padding */
+.bp3-datepicker {
+    background: var(--datepicker-bg);
+    padding: 6px;
+}
+/* month and year double carrots */
+.bp3-html-select .bp3-icon {
+    color: var(--datepicker-bg);
+}
+/* month back and forth bg color */
+button.bp3-button.bp3-minimal.DayPicker-NavButton.DayPicker-NavButton--next,
+button.bp3-button.bp3-minimal.DayPicker-NavButton.DayPicker-NavButton--prev {
+    background: var(--datepicker-bg) !important;
+}
+/* month back and forth carrot color / outside month date color */
+span.bp3-icon.bp3-icon-chevron-left,
+span.bp3-icon.bp3-icon-chevron-right,
+.bp3-datepicker .DayPicker-Day.DayPicker-Day--outside {
+    color: var(--datepicker-altfont-color);
+}
+/* month and year hover state */
+.bp3-html-select.bp3-minimal select:hover,
+.bp3-select.bp3-minimal select:hover {
+    background: #3d71ff;
+    color: var(--main-font-color);
+}
+/* abbreviated day titles */
+.bp3-datepicker .DayPicker-Weekday abbr[title] {
+    border-bottom: none;
+    font-size: 13px;
+    color: var(--datepicker-altfont-color);
+    cursor: default;
+}
+/* divider */
+.bp3-datepicker-caption + .bp3-divider {
+    border-bottom: none;
+}
+/* date appearances */
+.bp3-datepicker .DayPicker-Day > div:first-child {
+    line-height: 1.15em;
+    font-size: 14px;
+    font-weight: 600;
+}
+/* hover background color */
+.bp3-datepicker .DayPicker-Day:hover {
+    background: #3d71ff;
+    color: var(--main-font-color);
+}
+/* today bg color */
+.bp3-datepicker .DayPicker-Day.DayPicker-Day--isToday .bp3-datepicker-day-wrapper {
+    background: var(--datepicker-day-wrapper);
+}
+.bp3-html-select select,
+.bp3-select select {
+    color: var(--main-font-color);
+}
+
+/* -------------------------- */
+/*           CODE             */
+/* -------------------------- */
+/*---- INLINE CODE ----*/
+code {
+    background: var(--code-bg);
+    color: var(--code-font-color);
+    border: var(--code-border);
+    border-radius: var(--codemirror-border-radius);
+}
+
+/* code block colors */
+.CodeMirror {
+    border: 1px solid var(--codemirror-border-color);
+    border-radius: var(--codemirror-border-radius);
+    background: var(--codemirror-bg) !important;
+    color: var(--main-font-color) !important;
+}
+.Codemirror-code {
+    padding-left: 12px !important;
+}
+/* selected color */
+div.CodeMirror-selected {
+    background: var(--block-highlight) !important;
+}
+.CodeMirror-gutters {
+    background: var(--bg-color);
+    padding-right: 12px;
+    border-right: 1px solid var(--bg-color);
+}
+.CodeMirror-cursor {
+    border-left: 2px solid var(--bullet-color) !important;
+}
+/* Matching bracket like Atom */
+.CodeMirror-matchingbracket {
+    color: var(--main-font-color) !important;
+    border-bottom: 1px solid var(--code-matchingbracket-color);
+}
+/* Matching bracket like Visual Studio Code */
+/*
+.CodeMirror-matchingbracket {
+  color: var(--main-font-color) !important;
+  border: 1px solid var(--icon-color-hover);
+  background: #3c3c3c;
+}
+*/
+.CodeMirror-linenumber {
+    color: var(--codemirror-linenumber) !important;
+    font-family: monospace !important;
+    left: 0px !important;
+}
+span.cm-comment {
+    color: var(--cm-comment) !important;
+}
+span.cm-def {
+    color: var(--cm-def) !important;
+}
+span.cm-keyword {
+    color: var(--cm-keyword) !important;
+}
+span.cm-variable.cm-callee {
+    color: var(--cm-callee) !important;
+}
+span.cm-operator {
+    color: var(--cm-operator) !important;
+}
+span.cm-builtin {
+    color: var(--cm-builtin) !important;
+}
+span.cm-string {
+    color: var(--cm-string) !important;
+}
+span.cm-variable-3 {
+    color: var(--cm-variable-3) !important;
+}
+span.cm-variable-2 {
+    color: var(--cm-variable-2) !important;
+}
+span.cm-variable {
+    color: var(--cm-variable) !important;
+}
+span.cm-tag {
+    color: var(--cm-tag) !important;
+}
+span.cm-property {
+    color: var(--cm-property) !important;
+}
+span.cm-number {
+    color: var(--cm-number) !important;
+}
+span.cm-atom {
+    color: var(--cm-atom) !important;
+}
+span.cm-qualifier {
+    color: var(--cm-qualifier) !important;
+}
+
+/* ---------------------------*/
+/*      #MAIN DIV ELEMENTS    */
+/* ---------------------------*/
+/* main bg color */
+body {
+    background-color: var(--body-bg);
+}
+/* lessens header space for notes and sidebar */
+.roam-body-main.flex-h-box[style*="top: 45px;"] {
+    top: 0px !important;
+}
+/* footer reference box apperance */
+.rm-reference-item {
+    background-color: var(--reference-item-bg);
+    border-radius: var(--reference-item-border-radius);
+    border: var(--reference-item-border)
+}
+/* divider color in daily notes */
+.roam-log-container .roam-log-page {
+    border-top: 1px solid var(--divider-color);
+}
+
+/* ------------------------*/
+/*     #SEARCH & ICONS     */
+/* ------------------------*/
+.bp3-input,
+.bp3-input[readonly] {
+    /*SEARCH INPUT */
+    color: var(--search-font-color);
+    outline: 0;
+    border: 0;
+    border-radius: var(--search-border-radius);
+    background: var(--search-bg);
+}
+.bp3-input:focus,
+.bp3-input.bp3-active {
+    /*SEARCH INPUT ACTIVE*/
+    box-shadow: 0 0 0 1px var(--search-outline);
+}
+.bp3-popover {
+    /* SEARCH RESULT SHADOW */
+    box-shadow: 0px 4px 22px #00000035 !important;
+    border-radius: var(--search-border-radius);
+    border: var(--inline-search-border);
+}
+.bp3-input-group > .bp3-input-left-container > .bp3-icon,
+.bp3-input-group > .bp3-icon {
+    /* search icon */
+    color: #464d53;
+}
+.bp3-button.bp3-minimal {
+    /* sidebar filter count */
+    color: var(--icon-color);
+}
+.bp3-button.bp3-minimal:hover {
+    /* button hover */
+    color: var(--icon-color-hover);
+    background-color: var(--icon-bg-hover);
+}
+.bp3-button[class*="bp3-icon-"]::before {
+    /* top right icon color */
+    color: var(--icon-color);
+}
+.bp3-button .bp3-icon,
+.bp3-button .bp3-icon-standard,
+.bp3-button .bp3-icon-large {
+    /* filter icon color */
+    color: var(--icon-color);
+}
+
+/* top right icon color */
+.roam-topbar .bp3-button[class*="bp3-icon-"]::before {
+    color: var(--minirightbar-icon-color);
+}
+/* top right toolbar filter icon color */
+.roam-topbar .bp3-button .bp3-icon,
+.bp3-button .bp3-icon-standard,
+.bp3-button .bp3-icon-large {
+    /* filter icon color */
+    color: var(--minirightbar-icon-color);
+}
+
+/*--- Block References ---*/
+.rm-block-ref {
+    /* linked refs */
+    cursor: alias;
+    border-bottom: 1px solid var(--block-ref-border-bottom);
+}
+.rm-block-ref:hover {
+    background-color: var(--block-ref-hover-bg);
+}
+
+/*--- Context Menus ---*/
+.bp3-popover .bp3-popover-content,
+.bp3-menu {
+    background: var(--inline-search-bg);
+    color: var(--popover-font-color);
+    border-radius: 4px;
+}
+.bp3-popover .bp3-popover-arrow-fill {
+    fill: var(--inline-search-bg) !important;
+}
+.bp3-popover .bp3-popover-arrow-border {
+    fill: white !important;
+}
+.bp3-elevation-3 {
+    /* forward slash popup */
+    background-color: var(--inline-search-bg) !important;
+    border-radius: var(--inline-search-border-radius);
+    border: var(--inline-search-border);
+    box-shadow: 0px 4px 22px #0d0f11a1;
+}
+.bp3-elevation-3 .dont-unfocus-block[style*="background-color: rgb(213, 218, 223);"],
+.bp3-popover-content .flex-v-box.rm-menu-item[style*="background-color: rgb(213, 218, 223);"] {
+    /* selected row color */
+    background-color: var(--search-selected-row) !important;
+}
+.bp3-elevation-3 .dont-unfocus-block span[style*="color: rgb(129, 145, 157);"] {
+    /* June 2020 added icons in popover menu */
+    color: var(--icon-color) !important;
+}
+.bp3-popover .bp3-popover-content button.bp3-button {
+    /* popover buttons */
+    background: var(--inline-search-button-bg-color)!important;
+    color: var(--main-font-color);
+}
+.bp3-text-overflow-ellipsis {
+    /* foward slash popup text color */
+    color: var(--popover-font-color);
+}
+
+/* ------------------------*/
+/*         #ALL PAGES      */
+/* ------------------------*/
+.rm-all-pages .table .rm-pages-row {
+    border-bottom: 1px solid var(--allpage-bottom-border-color);
+}
+.bp3-control.bp3-checkbox .bp3-control-indicator {
+    background: var(--checkmark-bg-color);
+    border: var(--checkmark-border);
+}
+.bp3-control input:checked ~ .bp3-control-indicator {
+    background: var(--checkedmark-bg-color);
+    border: none;
+}
+.sorted-header-text {
+    color: var(--main-font-color);
+}
+.sorting-button-group .sort-button.focused {
+    color: #3d71ff;
+}
+.rm-clickable-pill {
+    opacity: 1;
+    background-color: var(--pages-mentions-level-bg);
+    color: var(--pages-mentions-font-color);
+    /*text color */
+}
+.rm-clickable-pill.level1-pill {
+    /* newly added—in June 2020—all pages mentions counter */
+    opacity: 1;
+    background-color: var(--pages-mentions-level1-bg);
+    color: var(--pages-mentions-font-color);
+    /*text color */
+}
+.rm-clickable-pill.level2-pill {
+    /* newly added—in June 2020—all pages mentions counter */
+    opacity: 1;
+    background-color: var(--pages-mentions-level2-bg);
+    color: var(--pages-mentions-font-color);
+    /*text color */
+}
+
+/*
+.rm-pages-row {
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+*/
+.rm-pages-row:first-child {
+    /* styles color of all pages header */
+    background-color: var(--pages-header-row) !important;
+}
+
+/* ------------------------*/
+/*          KANBAN         */
+/* ------------------------*/
+.kanban-board {
+    /*max-width: 100vw;*/
+    padding: 12px;
+    border: var(--kanban-board-border);
+    border-radius: var(--kanban-board-border-radius);
+    background-color: var(--kanban-board-bg);
+}
+.kanban-board .kanban-column-container {
+    display: flex;
+    overflow-x: scroll;
+}
+.kanban-column {
+    cursor: pointer;
+    flex: 1 0 200px;
+    flex-wrap: nowrap;
+    margin: var(--kanban-column-margin);
+    padding: 4px;
+    min-width: 200px;
+    background-color: var(--kanban-column-bg);
+}
+.kanban-card {
+    margin: 6px;
+    padding: 8px;
+    background-color: var(--kanban-card-bg);
+    color: var(--kanban-card-font-color);
+    border-radius: var(--kanban-card-border-radius);
+    border: var(--kanban-card-border);
+}
+
+/*--- Table ---*/
+.roam-table th,
+.roam-table td,
+.roam-table tr {
+    border: var(--table-border);
+}
+
+/*--- Encrypted Block ---*/
+.rm-encrypted-block {
+    color: var(--encrypted-font-color);
+    background-color: var(--encrypted-bg);
+    font-size: var(--encrypted-font-size);
+    border-radius: var(--encrypted-border-radius);
+    padding: var(--encrypted-padding);
+    font-weight: var(--encrypted-font-weight);
+}
+.rm-encrypted-block .rm-encrypted-passphrase {
+    display: inline;
+    cursor: pointer;
+}
+
+/* ------------------------*/
+/*    #LOADING ANIMATION   */
+/* ------------------------*/
+/* https://codepen.io/ivillamil/pen/dokmG */
+.loading-astrolabe {
+    height: 50px;
+    width: 50px;
+}
+
+.loading-astrolabe {
+    animation-name: rotate;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: normal;
+}
+
+.loading-astrolabe:before,
+.loading-astrolabe:after {
+    border-radius: 50%;
+    content: '';
+    display: block;
+    height: 20px;
+    width: 20px;
+}
+.loading-astrolabe:before {
+    animation: ball1 1s infinite;
+    background-color: var(--astrolabe-bg-color);
+    box-shadow: 30px 0 0 var(--astrolabe-bg-color);
+    margin-bottom: 10px;
+}
+.loading-astrolabe:after {
+    animation: ball2 1s infinite;
+    background-color: var(--astrolabe-bg-color);
+    box-shadow: 30px 0 0 var(--astrolabe-bg-color);
+}
+
+@keyframes rotate {
+    0% {
+        -webkit-transform: rotate(0deg) scale(0.8);
+        -moz-transform: rotate(0deg) scale(0.8);
+    }
+    50% {
+        -webkit-transform: rotate(360deg) scale(1.2);
+        -moz-transform: rotate(360deg) scale(1.2);
+    }
+    100% {
+        -webkit-transform: rotate(720deg) scale(0.8);
+        -moz-transform: rotate(720deg) scale(0.8);
+    }
+}
+
+@keyframes ball1 {
+    0% {
+        box-shadow: 30px 0 0 var(--astrolabe-bg-color);
+    }
+    50% {
+        box-shadow: 0 0 0 var(--astrolabe-bg-color);
+        margin-bottom: 0;
+        -webkit-transform: translate(15px, 15px);
+        -moz-transform: translate(15px, 15px);
+    }
+    100% {
+        box-shadow: 30px 0 0 var(--astrolabe-bg-color);
+        margin-bottom: 10px;
+    }
+}
+
+@keyframes ball2 {
+    0% {
+        box-shadow: 30px 0 0 var(--astrolabe-bg-color);
+    }
+    50% {
+        box-shadow: 0 0 0 var(--astrolabe-bg-color);
+        margin-top: -20px;
+        -webkit-transform: translate(15px, 15px);
+        -moz-transform: translate(15px, 15px);
+    }
+    100% {
+        box-shadow: 30px 0 0 var(--astrolabe-bg-color);
+        margin-top: 0;
+    }
+}
+
+
+/*--- hides original ---*/
+.loading-astrolabe img,
+.loading-astrolabe svg {
+    display: none;
+}
+.bp3-spinner {
+    visibility: hidden;
+}
+.bp3-spinner > * {
+    visibility: visible;
+}
+.bp3-spinner-head {
+    stroke: rgb(var(--color-primary)) !important;
+}
+
+/* ------------------------*/
+/*     #ONLOAD FADE IN     */
+/* ------------------------*/
+.roam-body {
+    animation: fadein .3s;
+    -moz-animation: fadein .3s;
+    /* Firefox */
+    -webkit-animation: fadein .3s;
+    /* Safari and Chrome */
+    -o-animation: fadein .3s;
+    /* Opera */
+}
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-moz-keyframes fadein {
+    /* Firefox */
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes fadein {
+    /* Safari and Chrome */
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-o-keyframes fadein {
+    /* Opera */
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* ------------------------*/
+/*          OTHER          */
+/* ------------------------*/
+#roam-sidebar-logo img,
+#roam-sidebar-logo span {
+    /* more subtle logo */
+    opacity: 0.0;
+}
+
+hr {
+    /*DONE*/
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid var(--hr-color);
+}
+
+blockquote {
+    font-size: 1.2em;
+    border-left: 3px solid var(--blockquote-border-color);
+    box-sizing: border-box;
+    color: var(--blockquote-font-color);
+    margin: 0px 0px 20px;
+    min-height: 0px;
+    min-width: 0px;
+    padding: 10px 20px;
+    background-color: var(--blockquote-bg);
+    text-align: justify;
+    text-justify: inter-word;
+}
+blockquote .small,
+blockquote footer,
+blockquote small {
+    display: block;
+    font-size: 80%;
+    line-height: 1.42857143;
+    color: var(--blockquote-cite);
+}
+
+#buffer {
+    /* HIDES BOTTOM RIGHT HELP ICON */
+    visibility: hidden;
+}
+
+/* Inline Select, thanks eatondpe for spotting this! */
+select {
+    background-color: var(--select-bg-color) !important;
+    border: 1px solid var(--select-border-color)!important;
+    border-radius: 4px;
+    padding: 1px 1px 2px 2px;
+    font-size: 0.95em;
+}
+
+.rm-emoji-button {
+    background-color: var(--emoji-bg) !important;
+    border: var(--emoji-border) !important;
+}
+
+.rm-query {
+    border: var(--query-border);
+    border-radius: var(--query-border-radius);
+    padding-bottom: var(--query-padding-bottom);
+}
+.rm-query .rm-query-title {
+    color: var(--query-title-font-color);
+    background-color: var(--query-title-bg);
+    padding: var(--s1);
+}
+
+
+/* ------------------------*/
+/*         HOTFIXES        */
+/* ------------------------*/
+.bp3-popover-content .flex-h-box strong {
+    color: #DCDEDD !important;
+}
+
+.roam-body-main.flex-h-box[style*="height: calc(100% - 45px);"] {
+    height: calc(100% + 45px) !important;
+}
+
+/* breadcrumb bg */
+.zoom-path-view .rm-zoom-mask {
+    background-color: #fff0;
+}
+.rm-saving-icon { /* fix sync/saving position */
+    margin-left: -1px;
+}
+
+/* --------------------------------------------------------------------------------*/
+/*     CODE BELOW FROM AZLEN ELZA's ZENITH THEME — ADDS CENTERED SEARCH            */
+/*     MINOR EDITS BY CAL ROBERT LEE (VISUAL, KERNING, and POSITION EDITS)         */
+/* --------------------------------------------------------------------------------*/
+.roam-topbar {
+    opacity: 1 !important;
+    background-color: rgba(238, 0, 0, 0) !important;
+    height: 10px;
+    width: 10px;
+    display: inline-block;
+    padding-left: calc(100vw - 275px) !important;
+    /* CRL EDIT */
+    position: absolute !important;
+
+    left: 0px;
+    transition: none !important;
+    z-index: 1;
+}
+
+
+/* TOP RIGHT TOOLBAR ICONS */
+.roam-topbar > .flex-h-box {
+    width: 490px;
+    /* CRL EDIT */
+    flex-direction: column;
+    /* CRL EDIT */
+    height: 1px !important;
+    align-items: start !important;
+    /*text-align: center;*/
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    left: 0px;
+}
+.roam-topbar > .flex-h-box > * {
+    flex: 0 0 15px !important;
+    /* CRL EDIT */
+    margin: auto !important;
+    max-width: 20px !important;
+    max-height: 20px !important;
+}
+.roam-topbar > div > .bp3-button:first-child {
+    align-self: start !important;
+    position: fixed !important;
+    left: 16px;
+    top: 16px;
+    /* CRL EDIT */
+    z-index: 9999999 !important;
+}
+.roam-topbar > div > *:nth-child(2) {
+    margin-top: 0px !important;
+    /* CRL EDIT */
+}
+/*#return*/
+.roam-topbar .bp3-icon-calendar {
+    background: var(--body-bg) !important;
+    border: none;
+}
+.roam-topbar .bp3-icon-calendar:hover {
+    background: var(--icon-bg-hover) !important;
+}
+
+/* SOME BLACKMAGIC TO GET SEARCH ICON TO FUNCTION LIKE OTHER BUTTONS —AZLEN ELZA */
+.roam-topbar .bp3-icon-search {
+    padding: 4px;
+    border-radius: 3px;
+    margin: 0 !important;
+    cursor: pointer;
+}
+
+/* style contains `200px` if search bar is NOT selected */
+/* hovering search bar in this mode == hovering icon itself */
+/* we must however have the search bar in front of the icon (but invisible) so that it can focus on click */
+/* very hacky :P */
+.rm-find-or-create-wrapper[style*="200px"]:hover .bp3-icon-search,
+.roam-topbar .bp3-icon-search:hover {
+    background-color: var(--bg-color);
+    color: var(--main-font-color) !important;
+}
+.roam-topbar .bp3-icon-search svg {
+    padding: 1px;
+}
+/* fix centering on calendar icon */
+.roam-topbar .bp3-icon-calendar {
+    margin: 0 !important
+}
+
+.rm-find-or-create-wrapper {
+    width: 20px !important;
+}
+.rm-find-or-create-wrapper .bp3-overlay {
+    position: fixed;
+    top: 50px;
+    left: calc(50% - 325px);
+    width: 650px;
+}
+
+/* -------------------------- */
+/*         #SEARCH BAR        */
+/* -------------------------- */
+#find-or-create-input {
+    /* search form*/
+    opacity: 0;
+    z-index: 10000; /* bring in front of icon to keep clickable */
+    cursor: pointer;
+    box-shadow: 0 0 0 100VW rgba(15, 15, 15, 0.0);
+    /* CRL EDIT */
+}
+/* change search button size CRL */
+#find-or-create-input.bp3-input {
+    padding: 0px 14px;
+}
+/*#find-or-create-input:active, */
+#find-or-create-input:focus {
+    opacity: 1;
+    position: fixed;
+    width: 600px;
+    top: 100px;
+    left: calc(50% - 600px / 2);
+    cursor: text;
+}
+
+
+#find-or-create-input {
+    border-radius: 3px 3px 0px 0px;
+    border: 1px solid #484848;
+    box-shadow: 0 0 0 100VH rgba(15, 15, 15, 0.4); /* Changed from 100VW to 100VH */
+    font-size: 18px;
+    padding: 20px 20px;
+    z-index: 10000;
+}
+/* if input is empty (no menu) then use all-around border-radius*/
+#find-or-create-input[value=""] {
+    border-radius: 3px;
+}
+
+/* highlight around search box */
+#find-or-create-input:focus {
+    padding: 25.5px;
+    /* CRL EDIT */
+}
+
+/* styling dropdown menu*/
+.rm-find-or-create-wrapper .bp3-popover {
+    z-index: 10000;
+    border-radius: 0px 0px 3px 3px;
+    border: 1px solid #484848;
+    overflow: hidden;
+    background: #1c1c1c;
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0);
+}
+
+/* prevent coloured menu */
+.rm-find-or-create-wrapper .bp3-popover-content,
+.rm-find-or-create-wrapper .bp3-menu {
+    background-color: transparent !important;
+}
+
+/* properly position search menu overlay */
+.rm-find-or-create-wrapper .bp3-overlay {
+    top: 152px;
+    width: 600px;
+    left: calc(50% + 265px);
+    z-index: 999999;
+}
+
+/* new page text */
+.rm-find-or-create-wrapper .rm-new-page {
+    color: rgb(var(--left-sidebar-bg)) !important;
+}
+
+/* selected search result */
+.rm-find-or-create-wrapper .rm-menu-item[style*="background"] {
+    background-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+/* search results highlighted words */
+.rm-find-or-create-wrapper .rm-menu-item .rm-search-list-item span[style*="yellow"],
+.rm-pages-title-col span[style*="yellow"] {
+    background-color: var(--highlight-background-color) !important;
+    color: var(--main-font-color);
+}
+.bp3-input {
+    background-color: var(--body-bg) !important;
+    color: var(--main-font-color) !important;
+}
+.bp3-input::placeholder {
+    background-color: var(--body-bg) !important;
+    color: var(--main-font-color) !important;
+    opacity: 0.3;
+}
+.rm-search-list-item {
+    color: var(--main-font-color) !important;
+    opacity: 0.6;
+}
+
+/* MOBILE & small screen for searchbar*/
+@media only screen and (max-width: 600px) {
+    
+    
+    #find-or-create-input {
+        max-width: calc(100% - 20px);
+        left: 10px !important;
+    }
+    
+    .rm-find-or-create-wrapper .bp3-transition-container {
+        position: fixed !important;
+        max-width: calc(100vw - 20px);
+        top: 152px !important;
+        left: 10px !important;
+    }
+
+    .rm-find-or-create-wrapper .bp3-transition-container {
+    transform: none !important;
+}
+}

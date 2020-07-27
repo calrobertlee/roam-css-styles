@@ -1,6 +1,6 @@
 # Cal Robert's Roam Themes
 
-- Update: Introduction of 3rd theme, Luna — a high contrast dark theme
+- Update: Introduction of 3rd theme, Lux — a high contrast dark theme 
 
 - Minimal aestheic with highly refined color palettes
 - Removed topbar for more space (shifted to right vertical bar)
@@ -19,6 +19,6 @@ This process can take about 20-30 seconds so please be patient!
 `@import url('https://calrobertlee.github.io/roam-themes/nox.css');`
 ![](https://raw.githubusercontent.com/garlicagreement/roam-css-styles/master/Images/Nox2%20Screenshot.png)
 
-## Luna
-`@import url('https://calrobertlee.github.io/roam-themes/luna.css');`
-![](https://raw.githubusercontent.com/garlicagreement/roam-css-styles/master/Images/Luna%20Screenshot.png)
+## Lux
+`@import url('https://calrobertlee.github.io/roam-themes/lux.css');`
+![](https://raw.githubusercontent.com/garlicagreement/roam-css-styles/master/Images/Lux%20Screenshot.png)
