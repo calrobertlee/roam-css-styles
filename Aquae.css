@@ -3,18 +3,10 @@
 Theme:      Roam Aquae Theme
 Edits by:   Cal Robert Lee (https://www.calrobert.com/)
 Colors by:  Cal Robert Lee
-Version:    v2.2.0
+Version:    v2.2.1
 Mirror:     https://raw.githubusercontent.com/calrobertlee/roam-css-styles/master/Aquae.css
 
-Quickfix:   - left sidebar "Shortcuts" header reposition
-
-Updates:    - Added centered search popup using code from Azlen Elza's Zenith theme — code starts around line 1174
-            - Edited colors for almost all elements
-            - Removed topbar
-            - Cleaned up spacing in right sidebar
-            - Cleaned up spacing in left bar
-            - Changed loading animation and page load animation
-            - and more
+Quickfix:   - Fixed left sidebar icon sizes
 
 Notes:      - Thanks to the supportive people on r/RoamResearch
             - Started learning programming and CSS last month so please excuse if it's a bit messy
@@ -422,15 +414,17 @@ span.bp3-icon-small.bp3-icon-star {
 .roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .starred-pages .page {
   color: var(--sidebar-font-color);
   padding: 4px 0px 8px 0px;
-  cursor:default; /* TRYING NO HOVER STATE */
-
+  cursor:default;
 }
 /* edits apperance of starred pages — HOVER STATE */
 .roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .starred-pages .page:hover {
   background-color: #0000;
   color: var(--sidebar-font-color-hover);
-  cursor:default; /* TRYING NO HOVER STATE */
-
+  cursor:default;
+}
+/* edits sidebar ICON SIZE and positioning for Daily Notes, Graph Ov. and All Pages icons */
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .icon {
+  font-size: inherit;
 }
 
 /* ---------------------------*/

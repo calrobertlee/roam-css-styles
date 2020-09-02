@@ -3,10 +3,10 @@
 Theme:      Roam Lux Theme
 Edits by:   Cal Robert Lee (https://www.calrobert.com/)
 Colors by:  Cal Robert Lee
-Version:    v1.1.2
+Version:    v1.1.3
 Import:    @import url('https://calrobertlee.github.io/roam-themes/lux.css');
 
-Updates:    - Release of higher contrast dark theme
+Quickfix:   - Fixed left sidebar icon sizes
 
 Notes:      - Thanks to the supportive people on r/RoamResearch
             - Started learning programming and CSS last month so please excuse if it's a bit messy
@@ -406,13 +406,16 @@ span.bp3-icon-small.bp3-icon-star {
     color: var(--sidebar-font-color);
     padding: 4px 0px 8px 0px;
     cursor: default;
-    /* TRYING NO HOVER STATE */
 }
 /* edits apperance of starred pages — HOVER STATE */
 .roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .starred-pages .page:hover {
     background-color: #0000;
     color: var(--sidebar-font-color-hover);
     cursor: default;
+}
+/* edits sidebar ICON SIZE and positioning for Daily Notes, Graph Ov. and All Pages icons */
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .icon {
+    font-size: inherit;
 }
 
 /* ---------------------------*/

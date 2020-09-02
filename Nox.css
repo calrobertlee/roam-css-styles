@@ -3,17 +3,10 @@
 Theme:      Roam Nox Theme
 Edits by:   Cal Robert Lee (https://www.calrobert.com/)
 Colors by:  Cal Robert Lee
-Version:    v2.2.1
+Version:    v2.2.2
 Mirror:     https://raw.githubusercontent.com/calrobertlee/roam-css-styles/master/Nox.css
 
-Quickfix:   - left sidebar "Shortcuts" header reposition
-
-Updates:    - Added centered search popup using code from Azlen Elza's Zenith theme — code starts around line 1174
-            - Edited colors for almost all elements
-            - Removed topbar
-            - Cleaned up spacing in right sidebar
-            - Cleaned up spacing in left bar
-            - and more
+Quickfix:   - Fixed left sidebar icon sizes
 
 Notes:      - Thanks to the supportive people on r/RoamResearch
             - Started learning programming and CSS last month so please excuse if it's a bit messy
@@ -424,14 +417,16 @@ span.bp3-icon-small.bp3-icon-star {
     color: var(--sidebar-font-color);
     padding: 4px 0px 8px 0px;
     cursor: default;
-    /* TRYING NO HOVER STATE */
 }
 /* edits apperance of starred pages — HOVER STATE */
 .roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .starred-pages .page:hover {
     background-color: #0000;
     color: var(--sidebar-font-color-hover);
     cursor: default;
-    /* TRYING NO HOVER STATE */
+}
+/* edits sidebar ICON SIZE and positioning for Daily Notes, Graph Ov. and All Pages icons */
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .icon {
+    font-size: inherit;
 }
 
 /* ---------------------------*/
@@ -592,7 +587,7 @@ span.bp3-icon-small.bp3-icon-star {
 /* ------------------------*/
 .bp3-icon-calendar {
     background: var(--tag-bg-color) !important;
-    border: var(--tag-border);
+    /* border: var(--tag-border); */
 }
 /* modal padding */
 .bp3-datepicker {
