@@ -3,10 +3,11 @@
 Theme:      Roam Aquae Theme
 Edits by:   Cal Robert Lee (https://www.calrobert.com/)
 Colors by:  Cal Robert Lee
-Version:    v2.2.2
+Version:    v2.2.3
 Mirror:     https://raw.githubusercontent.com/calrobertlee/roam-css-styles/master/Aquae.css
 
 Quickfix:   - fixed an new issue regarding the right sidebar. thanks for bringing this to my attention eatondpe!
+            - adjusted colors of "Linked/Unlinked Reference" header
 
 Notes:      - Thanks to the supportive people on r/RoamResearch, GitHub and Twitter!
             - I have been changing a lot of thing in my professional career! Which is the reason for some of the delays
@@ -37,7 +38,8 @@ Notes:      - Thanks to the supportive people on r/RoamResearch, GitHub and Twit
   --highlight-background-color: #fff1a4;
   --highlight-link-color: #0073f9;
   --highlight-padding: 4px 5px 4px 5px;
-  --reference-header-color: #d6eaff;
+  --reference-header-color: #c1cad4;
+  --reference-header-underline-color: #c5ccd46e;
   --sidebar-font-color: #717171;
   --sidebar-font-color-hover: #969696;
   --sidebar-hover-bg: none;
@@ -347,15 +349,17 @@ div.roam-center > div:first-child {
 /* -------------------------- */
 
 /* "Linked/Unlinked References" reference block header */
-.flex-h-box > div:nth-child(3) strong {
+.rm-reference-container .flex-h-box > div:nth-child(3) strong {
     color: var(--reference-header-color);
+    border-bottom: 1px solid var(--reference-header-underline-color);
 }
 /* "Linked/Unlinked References" reference block header */
 .flex-h-box strong[style*="color: rgb(206, 217, 224);"] {
     color: var(--reference-header-color) !important;
+    border-bottom: 1px solid var(--reference-header-underline-color);
 }
 .flex-h-box > div:nth-child(0) strong {
-    color: var(--main-font-color) !important;
+    color: red !important;
 }
 /* Right sidebar bold links color */
 #right-sidebar .flex-h-box > div:nth-child(2) strong {
@@ -873,6 +877,7 @@ body {
 }
 .bp3-popover-content .flex-h-box strong{ /* bold text color in popovers for "Includes" & "Removes" */
   color: #DCDEDD !important;
+  border-bottom: none !important;
 }
 
 /* ------------------------*/

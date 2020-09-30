@@ -3,10 +3,11 @@
 Theme:      Roam Nox Theme
 Edits by:   Cal Robert Lee (https://www.calrobert.com/)
 Colors by:  Cal Robert Lee
-Version:    v2.2.3
+Version:    v2.2.4
 Mirror:     https://raw.githubusercontent.com/calrobertlee/roam-css-styles/master/Nox.css
 
 Quickfix:   - fixed an new issue regarding the right sidebar. thanks for bringing this to my attention eatondpe!
+            - adjusted colors of "Linked/Unlinked Reference" header, also changed highlight color
 
 Notes:      - Thanks to the supportive people on r/RoamResearch, GitHub and Twitter!
             - I have been changing a lot of thing in my professional career! Which is the reason for some of the delays
@@ -21,9 +22,9 @@ Notes:      - Thanks to the supportive people on r/RoamResearch, GitHub and Twit
     --main-font-size: 1.0em;
 
     /* FONT COLORS */
-    --page-link-color: #89c1e6;
+    --page-link-color: #81C6F3;
     --page-bracket-color: #5B5B5B;
-    --external-link-color: #89c1e6;
+    --external-link-color: #81C6F3;
     --daily-notes-link-color: none;
     --sidebar-link-color: none;
     --h1-font-color: #c9d1d9;
@@ -32,10 +33,11 @@ Notes:      - Thanks to the supportive people on r/RoamResearch, GitHub and Twit
     --strong: #DCDEDD;
     --emphasis: #DCDEDD;
     --highlight-font-color: #F4F4F4;
-    --highlight-background-color: #34641F;
+    --highlight-background-color: #213784;
     --highlight-link-color: #F4F4F4;
     --highlight-padding: 4px 5px 4px 5px;
-    --reference-header-color: #2a323a;
+    --reference-header-color: #313b45;
+    --reference-header-underline-color: #313b4582;
     --sidebar-font-color: #696969;
     --sidebar-font-color-hover: #8f8f8f;
     --sidebar-hover-bg: none;
@@ -347,13 +349,15 @@ div.roam-center > div:first-child {
 /* -------------------------- */
 /*        #REFERENCES         */
 /* -------------------------- */
-/* "Linked/Unlinked References" reference block header */
-.flex-h-box > div:nth-child(3) strong {
+/* "Linked References" reference block header */
+.rm-reference-container .flex-h-box > div:nth-child(3) strong {
     color: var(--reference-header-color);
+    border-bottom: 1px solid var(--reference-header-underline-color);
 }
-/* "Linked/Unlinked References" reference block header */
+/* "Unlinked References" reference block header */
 .flex-h-box strong[style*="color: rgb(206, 217, 224);"] {
     color: var(--reference-header-color) !important;
+    border-bottom: 1px solid var(--reference-header-underline-color);
 }
 .flex-h-box > div:nth-child(0) strong {
     color: var(--main-font-color) !important;
@@ -883,6 +887,7 @@ body {
 }
 .bp3-popover-content .flex-h-box strong{ /* bold text color in popovers for "Includes" & "Removes" */
     color: #DCDEDD !important;
+    border-bottom: none !important;
 }
 
 /* ------------------------*/

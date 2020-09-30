@@ -3,10 +3,11 @@
 Theme:      Roam Lux Theme
 Edits by:   Cal Robert Lee (https://www.calrobert.com/)
 Colors by:  Cal Robert Lee
-Version:    v1.1.3
+Version:    v1.1.5
 Import:    @import url('https://calrobertlee.github.io/roam-themes/lux.css');
 
 Quickfix:   - fixed an new issue regarding the right sidebar. thanks for bringing this to my attention eatondpe!
+            - adjusted colors of "Linked/Unlinked Reference" header
 
 Notes:      - Thanks to the supportive people on r/RoamResearch, GitHub and Twitter!
             - I have been changing a lot of thing in my professional career! Which is the reason for some of the delays
@@ -35,7 +36,8 @@ Notes:      - Thanks to the supportive people on r/RoamResearch, GitHub and Twit
     --highlight-background-color: #7a5e23;
     --highlight-link-color: #F4F4F4;
     --highlight-padding: 4px 5px 4px 5px;
-    --reference-header-color: #2a323a;
+    --reference-header-color: #2d3c41;
+    --reference-header-underline-color: #2d3c417d;
     --sidebar-font-color: #696969;
     --sidebar-font-color-hover: #8f8f8f;
     --sidebar-hover-bg: none;
@@ -304,6 +306,9 @@ div.roam-center > div:first-child {
 .rm-page-ref-link-color {
     color: var(--page-link-color);
 }
+.rm-page-ref-link-color strong{ /* bold link */
+  color: var(--page-link-color);
+}
 /* internal link hover state */
 .rm-page-ref-link-color:focus,
 .rm-page-ref-link-color:hover {
@@ -337,12 +342,14 @@ div.roam-center > div:first-child {
 /*        #REFERENCES         */
 /* -------------------------- */
 /* "Linked/Unlinked References" reference block header */
-.flex-h-box > div:nth-child(3) strong {
+.rm-reference-container .flex-h-box > div:nth-child(3) strong {
     color: var(--reference-header-color);
+    border-bottom: 1px solid var(--reference-header-underline-color);
 }
 /* "Linked/Unlinked References" reference block header */
 .flex-h-box strong[style*="color: rgb(206, 217, 224);"] {
     color: var(--reference-header-color) !important;
+    border-bottom: 1px solid var(--reference-header-underline-color);
 }
 .flex-h-box > div:nth-child(0) strong {
     color: var(--main-font-color) !important;
