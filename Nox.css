@@ -3,13 +3,13 @@
 Theme:      Roam Nox Theme
 Edits by:   Cal Robert Lee (https://www.calrobert.com/)
 Colors by:  Cal Robert Lee
-Version:    v2.2.2
+Version:    v2.2.3
 Mirror:     https://raw.githubusercontent.com/calrobertlee/roam-css-styles/master/Nox.css
 
-Quickfix:   - Fixed left sidebar icon sizes
+Quickfix:   - fixed an new issue regarding the right sidebar. thanks for bringing this to my attention eatondpe!
 
-Notes:      - Thanks to the supportive people on r/RoamResearch
-            - Started learning programming and CSS last month so please excuse if it's a bit messy
+Notes:      - Thanks to the supportive people on r/RoamResearch, GitHub and Twitter!
+            - I have been changing a lot of thing in my professional career! Which is the reason for some of the delays
             - Super excited to have been selected to be on RoamResearch's Official theme's page!
             - For easy installation, create a page titled roam/css in RoamResearch and copy this code in
 
@@ -764,6 +764,10 @@ body {
 .roam-log-container .roam-log-page {
     border-top: 1px solid var(--divider-color);
 }
+/* increases height of entire body to compensate for repositioned topbar */
+.roam-body-main.flex-h-box[style*="height: calc(100% - 45px);"] {
+    height: calc(100%) !important;
+}
 
 /* ------------------------*/
 /*     #SEARCH & ICONS     */
@@ -824,6 +828,10 @@ body {
     /* filter icon color */
     color: var(--minirightbar-icon-color);
 }
+/* fix sync/saving position */
+.rm-saving-icon { 
+    margin-left: -1px;
+}
 
 /*--- Block References ---*/
 .rm-block-ref {
@@ -872,6 +880,9 @@ body {
 .bp3-text-overflow-ellipsis {
     /* foward slash popup text color */
     color: var(--popover-font-color);
+}
+.bp3-popover-content .flex-h-box strong{ /* bold text color in popovers for "Includes" & "Removes" */
+    color: #DCDEDD !important;
 }
 
 /* ------------------------*/
@@ -1203,20 +1214,10 @@ select {
 /* ------------------------*/
 /*         HOTFIXES        */
 /* ------------------------*/
-.bp3-popover-content .flex-h-box strong {
-    color: #DCDEDD !important;
-}
-
-.roam-body-main.flex-h-box[style*="height: calc(100% - 45px);"] {
-    height: calc(100% + 45px) !important;
-}
 
 /* breadcrumb bg */
 .zoom-path-view .rm-zoom-mask {
     background-color: #fff0;
-}
-.rm-saving-icon { /* fix sync/saving position */
-    margin-left: -1px;
 }
 
 /* --------------------------------------------------------------------------------*/

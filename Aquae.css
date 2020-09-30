@@ -3,13 +3,13 @@
 Theme:      Roam Aquae Theme
 Edits by:   Cal Robert Lee (https://www.calrobert.com/)
 Colors by:  Cal Robert Lee
-Version:    v2.2.1
+Version:    v2.2.2
 Mirror:     https://raw.githubusercontent.com/calrobertlee/roam-css-styles/master/Aquae.css
 
-Quickfix:   - Fixed left sidebar icon sizes
+Quickfix:   - fixed an new issue regarding the right sidebar. thanks for bringing this to my attention eatondpe!
 
-Notes:      - Thanks to the supportive people on r/RoamResearch
-            - Started learning programming and CSS last month so please excuse if it's a bit messy
+Notes:      - Thanks to the supportive people on r/RoamResearch, GitHub and Twitter!
+            - I have been changing a lot of thing in my professional career! Which is the reason for some of the delays
             - Super excited to have been selected to be on RoamResearch's Official theme's page!
             - For easy installation, create a page titled roam/css in RoamResearch and copy this code in
 
@@ -767,6 +767,10 @@ body {
 .roam-log-container .roam-log-page {
     border-top: 1px solid var(--divider-color);
 }
+/* increases height of entire body to compensate for repositioned topbar */
+.roam-body-main.flex-h-box[style*="height: calc(100% - 45px);"] {
+  height: calc(100%) !important;
+}
 
 /* ------------------------*/
 /*     #SEARCH & ICONS     */
@@ -813,6 +817,10 @@ body {
 /* top right toolbar filter icon color */
 .roam-topbar .bp3-button .bp3-icon, .bp3-button .bp3-icon-standard, .bp3-button .bp3-icon-large { /* filter icon color */
     color: var(--minirightbar-icon-color);
+}
+/* fix sync/saving position */
+.rm-saving-icon { 
+  margin-left: -1px;
 }
 
 /*--- Block References ---*/
@@ -863,11 +871,13 @@ body {
 .bp3-text-overflow-ellipsis { /* foward slash popup text color */
     color: var(--popover-font-color);
 }
+.bp3-popover-content .flex-h-box strong{ /* bold text color in popovers for "Includes" & "Removes" */
+  color: #DCDEDD !important;
+}
 
 /* ------------------------*/
 /*         #ALL PAGES      */
 /* ------------------------*/
-/*#3d71ff*/
 
 /* all page search input bg color */
 .bp3-input.bp3-round.bp3-minimal.search-input {
@@ -1188,20 +1198,7 @@ select {
 }
 
 
-/* ------------------------*/
-/*         HOTFIXES        */
-/* ------------------------*/
 
-.bp3-popover-content .flex-h-box strong{
-  color: #DCDEDD !important;
-}
-
-.roam-body-main.flex-h-box[style*="height: calc(100% - 45px);"] {
-  height: calc(100% + 45px) !important;
-}
-.rm-saving-icon { /* fix sync/saving position */
-  margin-left: -1px;
-}
 
 /* --------------------------------------------------------------------------------*/
 /*     CODE BELOW FROM AZLEN ELZA's ZENITH THEME — ADDS CENTERED SEARCH            */
