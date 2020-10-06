@@ -1,6 +1,6 @@
 # Cal Robert's Roam Themes
 
-- Update: Introduction of 3rd theme, Lux — a high contrast dark theme 
+- Update: Split primary code to `core.css`. Different color variations will now be in separate css files.
 
 - Minimal aestheic with highly refined color palettes
 - Removed topbar for more space (shifted to right vertical bar)
@@ -9,7 +9,7 @@
 To use, copy the @import line into a Roam page titled roam/css
 This process can take about 20-30 seconds so please be patient!
 
-[❤️ Donation link](https://www.paypal.me/calrobertdesign) if you enjoy these themes and want to support more future projects 🤟
+[❤️ Donation link](https://www.paypal.me/calrobertdesign) if you enjoy these themes and want to support more future projects! Also, thanks to my recent patrons, it's been great designing these themes for you guys.
 
 ## Aqaue
 `@import url('https://calrobertlee.github.io/roam-themes/aquae.css');`
