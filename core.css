@@ -52,20 +52,9 @@ Notes:      - Thanks to the supportive people on r/RoamResearch, GitHub and Twit
     font-family: var(--main-font);
     color: var(--main-font-color) !important;
 }
-
-  /* BOLD TEXT  not sure if used 
-  .roam-app strong{
-      color: var(--strong);
-  }
-  .roam.rm-title-textarea {
-app em {
-    color: var(--emphasis);
-  }
-  */
-  
   
 /*---------------------------------- 
-CLEAN    #LINKS
+    #LINKS
 ------------------------------------*/
 .rm-page-ref-link-color { /* internal link color */
     color: var(--page-link-color);
@@ -91,7 +80,7 @@ CLEAN    #LINKS
 }
 
 /*---------------------------------- 
-CLEAN    #ALIAS LINKS
+    #ALIAS LINKS
 ------------------------------------*/
 span [style*="background-color: rgb(235, 241, 245);"] {
     background-color: #00000000 !important;        
@@ -107,7 +96,7 @@ span [style*="padding: 4px 6px;"] { /* alias padding to match body text */
 }
 
 /*---------------------------------- 
-CLEAN    #TAGS
+    #TAGS
 ------------------------------------*/
   .rm-page-ref-tag {
     color:  var(--tag-font-color )!important;
@@ -129,7 +118,7 @@ CLEAN    #TAGS
   }
 
 /*---------------------------------- 
-CLEAN    #HIGHLIGHTS   
+    #HIGHLIGHTS   
 ------------------------------------*/
 .roam-highlight { /* text highlighting */
     background-color: var(--highlight-background-color);
@@ -151,7 +140,7 @@ CLEAN    #HIGHLIGHTS
 }
 
 /*---------------------------------- 
-CLEAN    #BULLETS & NEST LINE
+    #BULLETS & NEST LINE
 ------------------------------------*/
 .controls .simple-bullet-outer .simple-bullet-inner { /* bullet */
     border-radius: 50%;
@@ -174,7 +163,7 @@ CLEAN    #BULLETS & NEST LINE
 }
 
 /*---------------------------------- 
-CLEAN    #TODO 
+    #TODO 
 ------------------------------------*/
 .checkmark { /* todo */
   position: absolute;
@@ -209,7 +198,7 @@ CLEAN    #TODO
 }
 
 /*---------------------------------- 
-CLEAN    #CODE
+    #CODE
 ------------------------------------*/
 code { /* inline code */
 background: var(--code-bg);
@@ -287,7 +276,7 @@ span.cm-qualifier {
     color: var(--cm-qualifier) !important;}
 
 /*---------------------------------- 
-CLEAN    #ENCRYPTED BLOCK   
+    #ENCRYPTED BLOCK   
 ------------------------------------*/
 .rm-encrypted-block {
     color: var(--encrypted-font-color);
@@ -302,7 +291,7 @@ CLEAN    #ENCRYPTED BLOCK
     cursor: pointer;
 }
 /*---------------------------------- 
-CLEAN    #REFERENCES   
+    #REFERENCES   
 ------------------------------------*/
 .rm-reference-container .flex-h-box > div:nth-child(3) strong { /* "Linked/Unlinked References" reference block header */
     color: var(--reference-header-color);
@@ -323,7 +312,7 @@ CLEAN    #REFERENCES
 }
 
 /*---------------------------------- 
-CLEAN    #APP MAIN
+    #APP MAIN
 ------------------------------------*/
 body { /* main bg color */
     background-color: var(--body-bg);
@@ -333,7 +322,7 @@ body { /* main bg color */
 }
 
 /*---------------------------------- 
-CLEAN    #APP WIDTH & PADDING    
+    #APP WIDTH & PADDING    
 ------------------------------------*/
 .roam-block-container { /* increases width of text containers */
     max-width: 100% !important;
@@ -355,7 +344,7 @@ div.roam-center > div:first-child[style*="padding-left: calc((100% - 1032px) / 2
 }
 
 /*---------------------------------- 
-CLEAN    #LEFT SIDEBAR   
+    #LEFT SIDEBAR   
 ------------------------------------*/
     /* left sidebar color */
 .roam-body .roam-app .roam-sidebar-container {
@@ -418,7 +407,7 @@ span.bp3-icon-small.bp3-icon-star {
 }
 
 /*---------------------------------- 
-CLEAN    #RIGHT SIDEBAR   
+    #RIGHT SIDEBAR   
 ------------------------------------*/
 #right-sidebar { /* right sidebar color */
     background-color: var(--right-sidebar-bg) !important;
@@ -520,7 +509,7 @@ CLEAN    #RIGHT SIDEBAR
 }
 
 /*---------------------------------- 
-CLEAN    #DATEPICKER
+    #DATEPICKER
 ------------------------------------*/
 .bp3-icon-calendar {
     border: none;
@@ -670,7 +659,7 @@ span.bp3-icon.bp3-icon-chevron-right,
   }
   
 /*---------------------------------- 
-CLEAN    #KANBAN & TABLES
+    #KANBAN & TABLES
 ------------------------------------*/
 .kanban-board {
     padding: 12px;
@@ -706,7 +695,7 @@ CLEAN    #KANBAN & TABLES
 }
   
 /*-----------------------------------------------------------------------
-CLEAN    #LOADING ANIMATION ——  https://codepen.io/ivillamil/pen/dokmG 
+    #LOADING ANIMATION ——  https://codepen.io/ivillamil/pen/dokmG 
 -------------------------------------------------------------------------*/
 .loading-astrolabe {
     height: 50px;
@@ -801,7 +790,7 @@ CLEAN    #LOADING ANIMATION ——  https://codepen.io/ivillamil/pen/dokmG
 }
   
 /*---------------------------------- 
-CLEAN    #LOAD FADE IN ANIMATION
+    #LOAD FADE IN ANIMATION
 ------------------------------------*/
 .roam-body {
     animation: fadein .3s;
@@ -1102,9 +1091,9 @@ CLEAN    #LOAD FADE IN ANIMATION
       background-color: #fff0;
   }
 
-/*---------------------------------- 
-    #MOBILE
-------------------------------------*/
+/*------------------------------------------------------
+    #MOBILE — TESTING THIS SECTION, MAY NOT WORK WELL
+--------------------------------------------------------*/
 @media only screen and (max-width: 600px) {
       
 #right-sidebar { /* right sidebar color */
