@@ -206,6 +206,9 @@ Notes:      - Thanks to the supportive people on r/RoamResearch, GitHub and Twit
     --pomo-border: var(--divider-color);
     --pomo-running-border: #862C26;
     --pomo-running-font-color: #E5493E;
+    --pomo-break-bg: #20372D;
+    --pomo-break-border: #10764C;
+    --pomo-break-font-color: #0D7A4D;
 
     --query-results-border: none;
     --query-border: 1px solid #3e3b28a8;
@@ -1239,6 +1242,12 @@ select {
     border: 1px solid var(--pomo-running-border);
     color: var(--pomo-running-font-color) !important;
 }
+.rm-pomodoro.break {
+    background: var(--pomo-break-bg) !important;
+    border: 1px solid var(--pomo-break-border);
+    color: var(--pomo-break-font-color) !important;
+}
+
 
 /* --------------------------------------------------------------------------------*/
 /*     CODE BELOW FROM AZLEN ELZA's ZENITH THEME — ADDS CENTERED SEARCH            */
