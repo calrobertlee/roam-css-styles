@@ -1,9 +1,10 @@
 /*
 Theme:      Core Theme for Aquae, Nox, & Lux Roam themes
-Version:    1.0.3
+Version:    1.0.4
 By:         Cal Robert Lee (https://www.calrobert.com/)
 
-Quickfix:   - fixed search position, thanks diverbroski!
+Quickfix:   - fixed bottom padding
+            - fixed search position, thanks diverbroski!
             - fixed search results alignment
             - hid nonfunctional close sidebar button
             - added pomo
@@ -337,11 +338,8 @@ div.roam-center > div:first-child[style*="padding-right: calc((100% - 568px) / 2
 div.roam-center > div:first-child[style*="padding-left: calc((100% - 1032px) / 2);"] {
     padding-left: calc((100% - 900px) / 2) !important;
 }
-.roam-body-main.flex-h-box[style*="height: calc(100% - 45px);"] { /* increases height of entire body to compensate for repositioned topbar */
-    height: calc(100%) !important;
-}
-.roam-body-main.flex-h-box[style*="top: 45px;"] { /* lessens header space for notes and sidebar */
-    top: 0px !important;
+.roam-body .roam-app .roam-body-main {
+    flex: 0 0 calc(100% - 0px);
 }
 
 /*---------------------------------- 
