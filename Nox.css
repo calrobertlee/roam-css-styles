@@ -3,10 +3,10 @@
 Theme:      Roam Nox Theme
 Edits by:   Cal Robert Lee (https://www.calrobert.com/)
 Colors by:  Cal Robert Lee
-Version:    v2.2.5
+Version:    v2.2.6
 Mirror:     https://raw.githubusercontent.com/calrobertlee/roam-css-styles/master/Nox.css
 
-Quickfix:   - added pomo styling, thanks for bringing this to my attention u/abugosh!
+Quickfix:   - fixed search position, thanks diverbroski!
 
 Notes:      - Thanks to the supportive people on r/RoamResearch, GitHub and Twitter!
             - I have been changing a lot of thing in my professional career! Which is the reason for some of the delays
@@ -1259,7 +1259,7 @@ select {
     height: 10px;
     width: 10px;
     display: inline-block;
-    padding-left: calc(100vw - 275px) !important;
+    padding-left: calc(100vw - 500px) !important;
     /* CRL EDIT */
     position: absolute !important;
 

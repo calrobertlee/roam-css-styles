@@ -1,11 +1,9 @@
 /*
 Theme:      Core Theme for Aquae, Nox, & Lux Roam themes
-Version:    1.0.0
+Version:    1.0.1
 By:         Cal Robert Lee (https://www.calrobert.com/)
 
-Update:     - Created core.css to make updates easier
-            - Cleaned up the code
-            - Added alias appearance
+Quickfix:   - fixed search position, thanks diverbroski!
 
 Notes:      - Thanks to the supportive people on r/RoamResearch, GitHub and Twitter!
             - I have been changing a lot of thing in my professional career! Which is the reason for some of the delays
@@ -909,7 +907,7 @@ span.bp3-icon.bp3-icon-chevron-right,
       height: 10px;
       width: 10px;
       display: inline-block;
-      padding-left: calc(100vw - 275px) !important; /* CRL EDIT */
+      padding-left: calc(100vw - 500px) !important; /* CRL EDIT */
       position: absolute !important;
   
       left: 0px;
