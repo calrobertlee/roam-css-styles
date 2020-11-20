@@ -1,9 +1,11 @@
 /*
 Theme:      Core Theme for Aquae, Nox, & Lux Roam themes
-Version:    1.0.1
+Version:    1.0.2
 By:         Cal Robert Lee (https://www.calrobert.com/)
 
 Quickfix:   - fixed search position, thanks diverbroski!
+            - fixed search results alignment
+            - hid nonfunctional close sidebar button
 
 Notes:      - Thanks to the supportive people on r/RoamResearch, GitHub and Twitter!
             - I have been changing a lot of thing in my professional career! Which is the reason for some of the delays
@@ -416,7 +418,7 @@ span.bp3-icon-small.bp3-icon-star {
     margin-top: -50px;
     padding: 40px 0px 0px 30px;
 }
-#right-sidebar > div:nth-child(1)  { /* hides close sidebard button */
+#right-sidebar > div:nth-child(2)  { /* hides close sidebard button */
     visibility: hidden;
 }
 #roam-right-sidebar-content > * { /* right sidebar divider padding and margin */
@@ -1050,7 +1052,7 @@ span.bp3-icon.bp3-icon-chevron-right,
   .rm-find-or-create-wrapper .bp3-overlay {
       top: 152px;
       width: 600px;
-      left: calc(50% + 265px); /* CRL EDIT */
+      left: calc(50% + 272px);
       z-index: 999999;
   }
   
