@@ -1,11 +1,12 @@
 /*
 Theme:      Core Theme for Aquae, Nox, & Lux Roam themes
-Version:    1.0.2
+Version:    1.0.3
 By:         Cal Robert Lee (https://www.calrobert.com/)
 
 Quickfix:   - fixed search position, thanks diverbroski!
             - fixed search results alignment
             - hid nonfunctional close sidebar button
+            - added pomo
 
 Notes:      - Thanks to the supportive people on r/RoamResearch, GitHub and Twitter!
             - I have been changing a lot of thing in my professional career! Which is the reason for some of the delays
@@ -835,67 +836,92 @@ span.bp3-icon.bp3-icon-chevron-right,
     #OTHER
 ------------------------------------*/
   
-  #roam-sidebar-logo img,
-  #roam-sidebar-logo span { /* more subtle logo */
-    opacity: 0.0;
-  }
-  
-  hr { /*DONE*/
-      margin-top: 20px;
-      margin-bottom: 20px;
-      border: 0;
-      border-top: 1px solid var(--hr-color);
-  }
-  
-  blockquote {
-    font-size: 1.2em;
-    border-left: 3px solid var(--blockquote-border-color);
-    box-sizing: border-box;
-    color: var(--blockquote-font-color);
-    margin: 0px 0px 20px;
-    min-height: 0px;
-    min-width: 0px;
-    padding: 10px 20px;
-    background-color: var(--blockquote-bg);
-    text-align: justify;
-    text-justify: inter-word;
-  }
-  blockquote .small, blockquote footer, blockquote small {
-    display: block;
-    font-size: 80%;
-    line-height: 1.42857143;
-    color: var(--blockquote-cite);
-  }
-  
-  #buffer { /* HIDES BOTTOM RIGHT HELP ICON */
-      visibility: hidden;
-  }
-  
-  /* Inline Select, thanks eatondpe for spotting this! */
-  select {
-    background-color: var(--select-bg-color) !important;
-    border: 1px solid var(--select-border-color)!important;
-    border-radius: 4px;
-    padding: 1px 1px 2px 2px;
-    font-size: 0.95em;
-  }
-  
-  .rm-emoji-button {
-    background-color: var(--emoji-bg) !important;
-    border: var(--emoji-border) !important;
-  }
-  
-  .rm-query {
-    border: var(--query-border);
-    border-radius:  var(--query-border-radius);
-    padding-bottom:  var(--query-padding-bottom);
-  }
-  .rm-query .rm-query-title {
-    color:  var(--query-title-font-color);
-    background-color:  var(--query-title-bg);
-    padding:  var(--s1);
-  }
+#roam-sidebar-logo img,
+#roam-sidebar-logo span { /* more subtle logo */
+opacity: 0.0;
+}
 
+hr { /*DONE*/
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid var(--hr-color);
+}
+
+blockquote {
+font-size: 1.2em;
+border-left: 3px solid var(--blockquote-border-color);
+box-sizing: border-box;
+color: var(--blockquote-font-color);
+margin: 0px 0px 20px;
+min-height: 0px;
+min-width: 0px;
+padding: 10px 20px;
+background-color: var(--blockquote-bg);
+text-align: justify;
+text-justify: inter-word;
+}
+blockquote .small, blockquote footer, blockquote small {
+display: block;
+font-size: 80%;
+line-height: 1.42857143;
+color: var(--blockquote-cite);
+}
+
+#buffer { /* HIDES BOTTOM RIGHT HELP ICON */
+    visibility: hidden;
+}
+
+/* Inline Select, thanks eatondpe for spotting this! */
+select {
+background-color: var(--select-bg-color) !important;
+border: 1px solid var(--select-border-color)!important;
+border-radius: 4px;
+padding: 1px 1px 2px 2px;
+font-size: 0.95em;
+}
+
+.rm-emoji-button {
+background-color: var(--emoji-bg) !important;
+border: var(--emoji-border) !important;
+}
+
+.rm-query {
+border: var(--query-border);
+border-radius:  var(--query-border-radius);
+padding-bottom:  var(--query-padding-bottom);
+}
+.rm-query .rm-query-title {
+color:  var(--query-title-font-color);
+background-color:  var(--query-title-bg);
+padding:  var(--s1);
+}
+
+
+/* ------------------------*/
+/*         HOTFIXES        */
+/* ------------------------*/
+
+/* breadcrumb bg */
+.zoom-path-view .rm-zoom-mask {
+    background-color: #fff0 !important;
+}
+
+.rm-pomodoro {
+    background: transparent !important;
+    border: 1px solid var(--pomo-border);
+    color: var(--main-font-color) !important;
+}
+.rm-pomodoro.running {
+    background: var(--pomo-bg) !important;
+    border: 1px solid var(--pomo-running-border);
+    color: var(--pomo-running-font-color) !important;
+}
+.rm-pomodoro.break {
+    background: var(--pomo-break-bg) !important;
+    border: 1px solid var(--pomo-break-border);
+    color: var(--pomo-break-font-color) !important;
+}
 
 
 /*------------------------------------------------------------------------
