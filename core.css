@@ -1,9 +1,10 @@
 /*
 Theme:      Core Theme for Aquae, Nox, & Lux Roam themes
-Version:    1.0.4
+Version:    1.0.5
 By:         Cal Robert Lee (https://www.calrobert.com/)
 
-Quickfix:   - fixed bottom padding
+Quickfix:   - fixed topbar positioning
+            - fixed bottom padding
             - fixed search position, thanks diverbroski!
             - fixed search results alignment
             - hid nonfunctional close sidebar button
@@ -933,9 +934,8 @@ padding:  var(--s1);
       height: 10px;
       width: 10px;
       display: inline-block;
-      padding-left: calc(100vw - 500px) !important; /* CRL EDIT */
-      position: absolute !important;
-  
+      padding-left: calc(100vw - 275px) !important;
+      position: fixed !important;
       left: 0px;
       transition: none !important;
       z-index: 1;
