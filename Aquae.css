@@ -1,13 +1,10 @@
 /*
 Theme:      Roam Aquae Theme
-Version:    3.0.1
+Version:    3.0.2
 Edits by:   Cal Robert Lee (https://www.calrobert.com/)
 Colors by:  Cal Robert Lee
 
-Update:     - Created core.css to make updates easier
-            - Cleaned up the code
-            - Added alias appearance
-            - Added pomo variables to align with core.css
+Quickfix:   - divider color
 
 Notes:      - Thanks to the supportive people on r/RoamResearch, GitHub and Twitter!
             - I have been changing a lot of thing in my professional career! Which is the reason for some of the delays
@@ -124,7 +121,7 @@ Notes:      - Thanks to the supportive people on r/RoamResearch, GitHub and Twit
     --left-sidebar-divider-color: none;
     --right-sidebar-bg: var(--theme-white-1);
     --right-sidebar-border-left: 1px solid #e3e5e8;
-    --divider-color: hsla(222, 9%, 81%, .49);
+    --divider-color: #c2c7cb;
     --allpage-bottom-border-color: #ececec;
     --reference-item-bg: #fdfdfd;
     --reference-item-border-radius: 6px;
