@@ -1041,7 +1041,7 @@ padding:  var(--s1);
   
   #find-or-create-input {
       border-radius: 3px 3px 0px 0px; /* CRL EDIT */
-      border: 1px solid #c6c6c6; /* CRL EDIT */
+      border: 1px solid var(--divider-color); /* CRL EDIT */
       box-shadow: 0 0 0 200VH rgba(0, 0, 0, .07);
       font-size: 18px;
       padding: 20px 20px;
@@ -1061,9 +1061,9 @@ padding:  var(--s1);
   .rm-find-or-create-wrapper .bp3-popover {
       z-index: 10000;
       border-radius: 0px 0px 3px 3px;  /* CRL EDIT */
-      border: 1px solid #c6c6c6;   /* CRL EDIT */
+      border: 1px solid var(--divider-color);   /* CRL EDIT */
       overflow: hidden;
-      background: white;
+      background: var(--body-bg);
           box-shadow:0px 4px 22px #00000015 !important;  /* CAL ROBERT ADDITION */
   }
   
@@ -1074,15 +1074,15 @@ padding:  var(--s1);
   
   /* properly position search menu overlay */
   .rm-find-or-create-wrapper .bp3-overlay {
-      top: 152px;
+      top: 192px;
       width: 600px;
-      left: calc(50% + 272px);
+      left: calc(50% + 300px);
       z-index: 999999;
   }
   
   /* new page text */
   .rm-find-or-create-wrapper .rm-new-page {
-      color: rgb(var(--left-sidebar-bg)) !important;
+      color: var(--main-font-color) !important;
   }
   
   /* selected search result */
@@ -1097,11 +1097,11 @@ padding:  var(--s1);
       color: var(--main-font-color);
   }
   .bp3-input {
-      background-color: white !important;
+      background-color: var(--body-bg) !important;
       color: var(--main-font-color) !important;
   }
   .bp3-input::placeholder {
-      background-color: white !important;
+      background-color: var(--body-bg) !important;
       color: var(--main-font-color) !important;
       opacity: 0.3;
   }
