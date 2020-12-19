@@ -1160,7 +1160,7 @@ hr {
     border-top: 1px solid var(--hr-color);
 }
 
-blockquote {
+blockquote, .rm-bq {
     font-size: 1.2em;
     border-left: 3px solid var(--blockquote-border-color);
     box-sizing: border-box;
