@@ -466,6 +466,13 @@ span.bp3-icon-small.bp3-icon-star {
     margin-right: 20px;
 }
 
+/* ----------------------------*/
+/*        #GRAPH DROPDOWN      */
+/* ----------------------------*/
+.menu-item {
+    color: var(--main-font-color);
+}
+
 /* ------------------------------- */
 /*    #TEXT & BLOCK #HIGHLIGHTS    */
 /* ------------------------------- */
