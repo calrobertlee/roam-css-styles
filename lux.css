@@ -466,6 +466,13 @@ span.bp3-icon-small.bp3-icon-star {
     margin-right: 20px;
 }
 
+/* ----------------------------*/
+/*        #GRAPH DROPDOWN      */
+/* ----------------------------*/
+.menu-item {
+    color: var(--main-font-color);
+}
+
 /* ------------------------------- */
 /*    #TEXT & BLOCK #HIGHLIGHTS    */
 /* ------------------------------- */
@@ -1153,7 +1160,7 @@ hr {
     border-top: 1px solid var(--hr-color);
 }
 
-blockquote {
+blockquote, .rm-bq {
     font-size: 1.2em;
     border-left: 3px solid var(--blockquote-border-color);
     box-sizing: border-box;
