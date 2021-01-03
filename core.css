@@ -1,9 +1,9 @@
 /*
 Theme:      Core Theme for Aquae, Nox, & Lux Roam themes
-Version:    1.0.7
+Version:    1.0.8
 By:         Cal Robert Lee (https://www.calrobert.com/)
 
-Quickfix:   - added MD blockquote apperance, thanks alok and d9ifxw3yev, Line 864
+Quickfix:   - fixed left sidebar and search z-index
 
 Notes:      - Thanks to the supportive people on r/RoamResearch, GitHub and Twitter!
             - I have been changing a lot of thing in my professional career! Which is the reason for some of the delays
@@ -1112,6 +1112,14 @@ select {
   .zoom-path-view .rm-zoom-mask {
       background-color: #fff0;
   }
+
+/* HOT FIX 2 JAN 3 2021, thanks Morgan Sutherland! */
+.roam-topbar {
+    z-index: 9999999 !important;
+}
+.roam-sidebar-container {
+    z-index: 999 !important;
+}
 
 /*------------------------------------------------------
     #MOBILE — TESTING THIS SECTION, MAY NOT WORK WELL
