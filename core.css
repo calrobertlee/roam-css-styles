@@ -1,9 +1,9 @@
 /*
 Theme:      Core Theme for Aquae, Nox, & Lux Roam themes
-Version:    1.0.8
+Version:    1.1.0
 By:         Cal Robert Lee (https://www.calrobert.com/)
 
-Quickfix:   - fixed left sidebar and search z-index
+Quickfix:   - Slowly updating variable names that RoamResearch team has updated
 
 Notes:      - Thanks to the supportive people on r/RoamResearch, GitHub and Twitter!
             - I have been changing a lot of thing in my professional career! Which is the reason for some of the delays
@@ -54,18 +54,15 @@ Notes:      - Thanks to the supportive people on r/RoamResearch, GitHub and Twit
 /*---------------------------------- 
     #LINKS
 ------------------------------------*/
-.rm-page-ref-link-color { /* internal link color */
+.rm-page-ref--link { /* internal link color */
     color: var(--page-link-color);
 }
-.rm-page-ref-link-color strong{ /* bold link color */
-    color: var(--page-link-color);
-}
-.rm-page-ref-link-color:focus,
-.rm-page-ref-link-color:hover {  /* internal link hover state */
+.rm-page-ref:focus,
+.rm-page-ref:hover {  /* internal link hover state */
     color: var(--page-link-color);
     text-decoration: none;
 }
-.rm-page-ref-brackets { /* brackets */
+.rm-page-ref__brackets { /* brackets */
     color: var(--page-bracket-color);
 }
 .roam-app a { /* external link */
@@ -118,13 +115,13 @@ span [style*="padding: 4px 6px;"] { /* alias padding to match body text */
 /*---------------------------------- 
     #HIGHLIGHTS   
 ------------------------------------*/
-.roam-highlight { /* text highlighting */
+.rm-highlight { /* text highlighting */
     background-color: var(--highlight-background-color);
     color: var(--highlight-font-color);
     border-radius: 0px;
     padding: var(--highlight-padding);
 }
-.roam-highlight .rm-page-ref-link-color { /* highlighted link color */
+.rm-highlight .rm-page-ref-link-color { /* highlighted link color */
     color: var(--highlight-link-color);
 }
 .block-highlight-blue { /* block selection */
@@ -140,20 +137,17 @@ span [style*="padding: 4px 6px;"] { /* alias padding to match body text */
 /*---------------------------------- 
     #BULLETS & NEST LINE
 ------------------------------------*/
-.controls .simple-bullet-outer .simple-bullet-inner { /* bullet */
+.rm-bullet__inner { /* bullet */
     border-radius: 50%;
     width: 5px;
     height: 5px;
     background-color: var(--bullet-color);
 }
-.roam-bullet-closed { /* collapsed bullet */
-    background-color: var(--bullet-closed-color);
-    width: 16px;
-    border: 1px solid var(--bullet-closed-border-color);
+.rm-bullet.rm-bullet--closed .rm-bullet__inner { /* collapsed bullet */
+    border: 4px solid var(--bullet-closed-border-color);
 }
-#right-sidebar .roam-bullet-closed { /* collapsed bullet's in right sidebar */
-    background-color: var(--bullet-closed-color);
-    border: 1px solid var(--bullet-closed-border-color);
+.sidebar-content .rm-bullet.rm-bullet--closed .rm-bullet__inner { /* collapsed bullet's in right sidebar */
+    border: 4px solid var(--bullet-closed-border-color);
 }
 /* nest diagram line */
 .block-border-left {
