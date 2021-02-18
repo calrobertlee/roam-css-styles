@@ -1,10 +1,10 @@
 /*
 Theme:      Roam Aquae Theme
-Version:    3.0.2
+Version:    3.0.3
 Edits by:   Cal Robert Lee (https://www.calrobert.com/)
 Colors by:  Cal Robert Lee
 
-Quickfix:   - divider color
+Quickfix:   - multibar and some other stuff
 
 Notes:      - Thanks to the supportive people on r/RoamResearch, GitHub and Twitter!
             - I have been changing a lot of thing in my professional career! Which is the reason for some of the delays
@@ -65,7 +65,7 @@ Notes:      - Thanks to the supportive people on r/RoamResearch, GitHub and Twit
     --bullet-color: #0069e3;
     --bullet-closed-color: #bcdbffb5;
     --bullet-closed-border-color: #0069e345;
-    --tree-vertline: 2px solid hsl(0, 0%, 96%);
+    --multibar: hsl(220, 9%, 85%);
     --bullet-position: ; /* UPDATE*/
   
     --checkmark-top: -1px;
@@ -207,7 +207,7 @@ Notes:      - Thanks to the supportive people on r/RoamResearch, GitHub and Twit
     --emoji-bg: #f0f7fd;
     --emoji-border: 0px solid none;
     --emoji-color: none;
-
+  
     --pomo-bg: #fff6f6;
     --pomo-border: var(--divider-color);
     --pomo-running-border: #BD453F;

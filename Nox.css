@@ -1,10 +1,10 @@
 /*
 Theme:      Roam Nox Theme
-Version:    3.0.0
+Version:    3.0.1
 Edits by:   Cal Robert Lee (https://www.calrobert.com/)
 Colors by:  Cal Robert Lee
 
-Update:     - Updated Nox to import from core.css
+Update:     - multibar
 
 Notes:      - Thanks to the supportive people on r/RoamResearch, GitHub and Twitter!
             - I have been changing a lot of thing in my professional career! Which is the reason for some of the delays
@@ -64,8 +64,8 @@ Notes:      - Thanks to the supportive people on r/RoamResearch, GitHub and Twit
   
     --bullet-color: #62A7F5;
     --bullet-closed-color: #528ed24d;
-    --bullet-closed-border-color: #62a7f533;
-    --tree-vertline: 2px solid #26292c;
+    --bullet-closed-border-color: rgba(98, 167, 245, .3);
+    --multibar: hsl(210, 7%, 25%);
     /*--bullet-position: ;*/
   
     --checkmark-top: -1px;

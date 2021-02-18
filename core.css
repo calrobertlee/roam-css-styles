@@ -1,9 +1,10 @@
 /*
 Theme:      Core Theme for Aquae, Nox, & Lux Roam themes
-Version:    1.1.0
+Version:    1.2.0
 By:         Cal Robert Lee (https://www.calrobert.com/)
 
-Quickfix:   - Slowly updating variable names that RoamResearch team has updated
+Fixes:      - Updating a lot of broken components from recent release
+
 
 Notes:      - Thanks to the supportive people on r/RoamResearch, GitHub and Twitter!
             - I have been changing a lot of thing in my professional career! Which is the reason for some of the delays
@@ -57,8 +58,11 @@ Notes:      - Thanks to the supportive people on r/RoamResearch, GitHub and Twit
 .rm-page-ref--link { /* internal link color */
     color: var(--page-link-color);
 }
-.rm-page-ref:focus,
-.rm-page-ref:hover {  /* internal link hover state */
+.rm-page-ref--link strong{ /* bold link color */
+    color: var(--page-link-color);
+}
+.rm-page-ref--link:focus,
+.rm-page-ref--link:hover {  /* internal link hover state */
     color: var(--page-link-color);
     text-decoration: none;
 }
@@ -93,7 +97,7 @@ span [style*="padding: 4px 6px;"] { /* alias padding to match body text */
 /*---------------------------------- 
     #TAGS
 ------------------------------------*/
-  .rm-page-ref-tag {
+  .rm-page-ref--tag {
     color:  var(--tag-font-color )!important;
     font-weight: 400;
     background-color: var(--tag-bg-color);
@@ -102,7 +106,7 @@ span [style*="padding: 4px 6px;"] { /* alias padding to match body text */
     padding: var(--tag-padding);
     text-decoration: none;
   }
-  .rm-page-ref-tag:hover {
+  .rm-page-ref--tag:hover {
     color: var(--tagHover-font-color) !important;
     font-weight: 400;
     background-color: var(--tagHover-bg-color);
@@ -121,7 +125,7 @@ span [style*="padding: 4px 6px;"] { /* alias padding to match body text */
     border-radius: 0px;
     padding: var(--highlight-padding);
 }
-.rm-highlight .rm-page-ref-link-color { /* highlighted link color */
+.rm-highlight .rm-page-ref--link { /* highlighted link color */
     color: var(--highlight-link-color);
 }
 .block-highlight-blue { /* block selection */
@@ -144,14 +148,20 @@ span [style*="padding: 4px 6px;"] { /* alias padding to match body text */
     background-color: var(--bullet-color);
 }
 .rm-bullet.rm-bullet--closed .rm-bullet__inner { /* collapsed bullet */
+    background-color: var(--bullet-color);
     border: 4px solid var(--bullet-closed-border-color);
 }
-.sidebar-content .rm-bullet.rm-bullet--closed .rm-bullet__inner { /* collapsed bullet's in right sidebar */
+#right-sidebar .rm-bullet.rm-bullet--closed .rm-bullet__inner { /* collapsed bullet */
+    background-color: var(--bullet-color);
     border: 4px solid var(--bullet-closed-border-color);
 }
 /* nest diagram line */
-.block-border-left {
-    border-left: var(--tree-vertline);
+.rm-multibar {
+    border-color: var(--multibar);
+}
+.rm-multibar:hover {
+    border-right: 1px solid var(--theme-blue-1);
+    width: calc(1px + calc(1px - -5px));
 }
 
 /*---------------------------------- 
@@ -328,9 +338,6 @@ div.roam-center > div:first-child[style*="padding-right: calc((100% - 568px) / 2
 div.roam-center > div:first-child[style*="padding-left: calc((100% - 1032px) / 2);"] {
     padding-left: calc((100% - 900px) / 2) !important;
 }
-.roam-body .roam-app .roam-body-main {
-    flex: 0 0 calc(100% - 0px);
-}
 
 /*---------------------------------- 
     #LEFT SIDEBAR   
@@ -472,11 +479,11 @@ span.bp3-icon-small.bp3-icon-star {
 }
 
 /* top right icon color */
-.roam-topbar .bp3-button[class*="bp3-icon-"]::before {
+.rm-topbar .bp3-button[class*="bp3-icon-"]::before {
     color: var(--minirightbar-icon-color);
 }
 /* top right toolbar filter icon color */
-.roam-topbar .bp3-button .bp3-icon, .bp3-button .bp3-icon-standard, .bp3-button .bp3-icon-large { /* filter icon color */
+.rm-topbar .bp3-button .bp3-icon, .bp3-button .bp3-icon-standard, .bp3-button .bp3-icon-large { /* filter icon color */
     color: var(--minirightbar-icon-color);
 }
 /* fix sync/saving position */
@@ -613,6 +620,7 @@ span.bp3-icon.bp3-icon-chevron-right,
       background: var(--checkmark-bg-color);
       border: none;
   }
+
   /* checked appearance */
   .bp3-control input:checked ~ .bp3-control-indicator {
       background: var(--checkedmark-bg-color);
@@ -837,23 +845,23 @@ hr { /*DONE*/
 }
 
 blockquote {
-    font-size: 1.2em;
-    border-left: 3px solid var(--blockquote-border-color);
-    box-sizing: border-box;
-    color: var(--blockquote-font-color);
-    margin: 0px 0px 20px;
-    min-height: 0px;
-    min-width: 0px;
-    padding: 10px 20px;
-    background-color: var(--blockquote-bg);
-    text-align: justify;
-    text-justify: inter-word;
+font-size: 1.2em;
+border-left: 3px solid var(--blockquote-border-color);
+box-sizing: border-box;
+color: var(--blockquote-font-color);
+margin: 0px 0px 20px;
+min-height: 0px;
+min-width: 0px;
+padding: 10px 20px;
+background-color: var(--blockquote-bg);
+text-align: justify;
+text-justify: inter-word;
 }
 blockquote .small, blockquote footer, blockquote small {
-    display: block;
-    font-size: 80%;
-    line-height: 1.42857143;
-    color: var(--blockquote-cite);
+display: block;
+font-size: 80%;
+line-height: 1.42857143;
+color: var(--blockquote-cite);
 }
 .rm-bq { /* MD blockquote color, thanks alok and d9ifxw3yev */
     background-color: var(--codemirror-bg);
@@ -865,27 +873,27 @@ blockquote .small, blockquote footer, blockquote small {
 
 /* Inline Select, thanks eatondpe for spotting this! */
 select {
-    background-color: var(--select-bg-color) !important;
-    border: 1px solid var(--select-border-color)!important;
-    border-radius: 4px;
-    padding: 1px 1px 2px 2px;
-    font-size: 0.95em;
+background-color: var(--select-bg-color) !important;
+border: 1px solid var(--select-border-color)!important;
+border-radius: 4px;
+padding: 1px 1px 2px 2px;
+font-size: 0.95em;
 }
 
 .rm-emoji-button {
-    background-color: var(--emoji-bg) !important;
-    border: var(--emoji-border) !important;
+background-color: var(--emoji-bg) !important;
+border: var(--emoji-border) !important;
 }
 
 .rm-query {
-    border: var(--query-border);
-    border-radius:  var(--query-border-radius);
-    padding-bottom:  var(--query-padding-bottom);
+border: var(--query-border);
+border-radius:  var(--query-border-radius);
+padding-bottom:  var(--query-padding-bottom);
 }
 .rm-query .rm-query-title {
-    color:  var(--query-title-font-color);
-    background-color:  var(--query-title-bg);
-    padding:  var(--s1);
+color:  var(--query-title-font-color);
+background-color:  var(--query-title-bg);
+padding:  var(--s1);
 }
 
 
@@ -920,13 +928,14 @@ select {
     MINOR EDITS BY CAL ROBERT LEE (VISUAL, KERNING, and POSITION EDITS)
 --------------------------------------------------------------------------*/
 
-  .roam-topbar {
+  .rm-topbar {
       opacity: 1 !important;
       background-color: rgba(238, 0, 0, 0) !important;
       height: 10px;
       width: 10px;
       display: inline-block;
-      padding-left: calc(100vw - 275px) !important;
+      padding-left: calc(100vw - 35px) !important;
+      padding-top: 10px !important;
       position: fixed !important;
       left: 0px;
       transition: none !important;
@@ -935,7 +944,7 @@ select {
   
   /* TOP RIGHT TOOLBAR ICONS */
   
-  .roam-topbar > .flex-h-box {
+  .rm-topbar > .flex-h-box {
       width: 490px; /* CRL EDIT */
       flex-direction: column; /* CRL EDIT */
       height: 1px !important;
@@ -946,34 +955,34 @@ select {
       position: sticky !important;
       left: 0px;
   }
-  .roam-topbar > .flex-h-box > * {
+  .rm-topbar > .flex-h-box > * {
       flex: 0 0 15px !important; /* CRL EDIT */
       margin: auto !important;
       max-width: 20px !important;
       max-height: 20px !important;
   }
-  .roam-topbar > div >.bp3-button:first-child {
+  .rm-topbar > div >.bp3-button:first-child {
       align-self: start !important;
       position: fixed !important;
       left: 16px;
       top: 16px; /* CRL EDIT */
       z-index: 9999999 !important;
   }
-  .roam-topbar > div > *:nth-child(2) {
+  .rm-topbar > div > *:nth-child(2) {
       margin-top:0px !important; /* CRL EDIT */
   }
   /*#return*/
-  .roam-topbar .bp3-icon-calendar {
+  .rm-topbar .bp3-icon-calendar {
     background: var(--body-bg) !important;
     border: none;
   }
-  .roam-topbar .bp3-icon-calendar:hover {
+  .rm-topbar .bp3-icon-calendar:hover {
     background: var(--icon-bg-hover) !important;
   }
   
   /* SOME BLACKMAGIC TO GET SEARCH ICON TO FUNCTION LIKE OTHER BUTTONS —AZLEN ELZA */
   
-  .roam-topbar .bp3-icon-search {
+  .rm-topbar .bp3-icon-search {
       padding: 4px;
       border-radius: 3px;
       margin: 0 !important;
@@ -985,17 +994,17 @@ select {
   /* we must however have the search bar in front of the icon (but invisible) so that it can focus on click */
   /* very hacky :P */
   
-  .rm-find-or-create-wrapper[style*="200px"]:hover .bp3-icon-search, .roam-topbar .bp3-icon-search:hover {
+  .rm-find-or-create-wrapper[style*="200px"]:hover .bp3-icon-search, .rm-topbar .bp3-icon-search:hover {
       background-color: var(--icon-bg-hover);
       color: var(--minirightbar-icon-color) !important;
   }
-  .roam-topbar .bp3-icon-search svg {
+  .rm-topbar .bp3-icon-search svg {
       padding: 1px;
       color: var(--minirightbar-icon-color) !important;
   
   }
   /* fix centering on calendar icon */
-  .roam-topbar .bp3-icon-calendar { margin: 0 !important }
+  .rm-topbar .bp3-icon-calendar { margin: 0 !important }
   
   .rm-find-or-create-wrapper {
       width: 20px !important;
@@ -1052,11 +1061,11 @@ select {
   /* styling dropdown menu*/
   .rm-find-or-create-wrapper .bp3-popover {
       z-index: 10000;
-      border-radius: 0px 0px 3px 3px;  /* CRL EDIT */
-      border: 1px solid var(--divider-color);   /* CRL EDIT */
+      border-radius: 0px 0px 3px 3px;
+      border: 1px solid var(--divider-color);
       overflow: hidden;
       background: var(--body-bg);
-          box-shadow:0px 4px 22px #00000015 !important;  /* CAL ROBERT ADDITION */
+          box-shadow:0px 4px 22px #00000015 !important;
   }
   
   /* prevent coloured menu */
@@ -1066,7 +1075,7 @@ select {
   
   /* properly position search menu overlay */
   .rm-find-or-create-wrapper .bp3-overlay {
-      top: 192px;
+      top: 180px;
       width: 600px;
       left: calc(50% + 300px);
       z-index: 999999;
@@ -1074,7 +1083,7 @@ select {
   
   /* new page text */
   .rm-find-or-create-wrapper .rm-new-page {
-      color: var(--main-font-color) !important;
+      color: rgb(var(--left-sidebar-bg)) !important;
   }
   
   /* selected search result */
@@ -1106,7 +1115,7 @@ select {
   .zoom-path-view .rm-zoom-mask {
       background-color: #fff0;
   }
-
+  
 /* HOT FIX 2 JAN 3 2021, thanks Morgan Sutherland! */
 .roam-topbar {
     z-index: 9999999 !important;
