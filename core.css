@@ -338,6 +338,13 @@ div.roam-center > div:first-child[style*="padding-right: calc((100% - 568px) / 2
 div.roam-center > div:first-child[style*="padding-left: calc((100% - 1032px) / 2);"] {
     padding-left: calc((100% - 900px) / 2) !important;
 }
+.roam-body .roam-app .roam-body-main {
+    flex: 0 0 calc(100% - 0px) !important;
+}
+.roam-body .roam-app .roam-main .roam-article {
+    position: relative;
+    padding: 55px 42px 120px;
+}
 
 /*---------------------------------- 
     #LEFT SIDEBAR   
