@@ -1,10 +1,11 @@
 /*
 Theme:      Roam Lux Theme
-Version:    2.0.2
+Version:    2.0.3
 Edits by:   Cal Robert Lee (https://www.calrobert.com/)
 Colors by:  Cal Robert Lee
 
 Hotfix:     - embed temporary patch
+            - nested ref temp patch
 
 Notes:      - Thanks to the supportive people on r/RoamResearch, GitHub and Twitter!
             - I have been changing a lot of thing in my professional career! Which is the reason for some of the delays
@@ -225,17 +226,32 @@ Notes:      - Thanks to the supportive people on r/RoamResearch, GitHub and Twit
 
 /* TEMP PATCH FOR EMBED */
 .rm-embed-container {
-    background-color: hsl(213, 10%, 18%);
-    }
-    
-    .rm-embed-container .rm-embed-container {
-    background-color: hsl(213, 10%, 13%);
-    }
-    
-    .rm-embed-container .rm-embed-container .rm-embed-container{
-    background-color: hsl(213, 10%, 18%);
-    }
-    
-    .rm-embed-container .rm-embed-container .rm-embed-container .rm-embed-container{
-    background-color: hsl(213, 10%, 13%);
-    }
+background-color: hsl(213, 10%, 18%);
+}
+
+.rm-embed-container .rm-embed-container {
+background-color: hsl(213, 10%, 13%);
+}
+
+.rm-embed-container .rm-embed-container .rm-embed-container{
+background-color: hsl(213, 10%, 18%);
+}
+
+.rm-embed-container .rm-embed-container .rm-embed-container .rm-embed-container{
+background-color: hsl(213, 10%, 13%);
+}
+
+/* TEMP PATCH FOR INLINE & NESTED REFS, THANKS b1uegh0st!!! */
+.rm-nested-refs {
+    background-color: hsl(49, 95%, 30%);
+    color: hsl(0, 0%, 91%);
+}
+.rm-inline-references {
+    background-color: hsl(213, 10%, 14%);
+}
+.rm-block__self .rm-block__ref-count.rm-active {
+    background-color: #1f2022;
+} 
+.rm-zoom-path .rm-zoom-item {
+    color: hsl(0, 0%, 91%);
+}
