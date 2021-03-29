@@ -946,7 +946,7 @@ padding:  var(--s1);
       position: fixed !important;
       left: 0px;
       transition: none !important;
-      z-index: 1;
+      z-index: 99999;
   }
   
   /* TOP RIGHT TOOLBAR ICONS */
