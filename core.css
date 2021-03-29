@@ -954,7 +954,7 @@ padding:  var(--s1);
 }
 
 /* This took FOREVER to fix! So happy to finally have figured this out */
-#app > div > div > div.flex-h-box > div.roam-main > div.rm-files-dropzone > div > span:nth-child(6) > span > span > span {
+#app > div > div > div.flex-h-box > div.roam-main > div.rm-files-dropzone > div > span:nth-child(7) > span > span > span {
     padding-top: 25px !important;
 }
 
