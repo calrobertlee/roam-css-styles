@@ -1,10 +1,10 @@
 /*
 Theme:      Roam Lux Theme
-Version:    2.0.1
+Version:    2.0.2
 Edits by:   Cal Robert Lee (https://www.calrobert.com/)
 Colors by:  Cal Robert Lee
 
-Update:     - multibar
+Hotfix:     - embed temporary patch
 
 Notes:      - Thanks to the supportive people on r/RoamResearch, GitHub and Twitter!
             - I have been changing a lot of thing in my professional career! Which is the reason for some of the delays
@@ -222,3 +222,20 @@ Notes:      - Thanks to the supportive people on r/RoamResearch, GitHub and Twit
     --query-title-font-color: #d0b94482;
     --query-title-bg: #3d381e8f;  
 }
+
+/* TEMP PATCH FOR EMBED */
+.rm-embed-container {
+    background-color: hsl(213, 10%, 18%);
+    }
+    
+    .rm-embed-container .rm-embed-container {
+    background-color: hsl(213, 10%, 13%);
+    }
+    
+    .rm-embed-container .rm-embed-container .rm-embed-container{
+    background-color: hsl(213, 10%, 18%);
+    }
+    
+    .rm-embed-container .rm-embed-container .rm-embed-container .rm-embed-container{
+    background-color: hsl(213, 10%, 13%);
+    }

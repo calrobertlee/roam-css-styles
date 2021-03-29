@@ -1,10 +1,10 @@
 /*
 Theme:      Roam Nox Theme
-Version:    3.0.1
+Version:    3.0.2
 Edits by:   Cal Robert Lee (https://www.calrobert.com/)
 Colors by:  Cal Robert Lee
 
-Update:     - multibar
+Hotfix:     - embed temporary patch
 
 Notes:      - Thanks to the supportive people on r/RoamResearch, GitHub and Twitter!
             - I have been changing a lot of thing in my professional career! Which is the reason for some of the delays
@@ -227,3 +227,20 @@ Notes:      - Thanks to the supportive people on r/RoamResearch, GitHub and Twit
     --scrollbar-track: true;
     /*--scrollbar-thumb: ;*/
 }
+
+/* TEMP PATCH FOR EMBED */
+.rm-embed-container {
+    background-color: hsl(204, 10%, 18%);
+    }
+    
+    .rm-embed-container .rm-embed-container {
+    background-color: hsl(204, 10%, 13%);
+    }
+    
+    .rm-embed-container .rm-embed-container .rm-embed-container{
+    background-color: hsl(204, 10%, 18%);
+    }
+    
+    .rm-embed-container .rm-embed-container .rm-embed-container .rm-embed-container{
+    background-color: hsl(204, 10%, 13%);
+    }
