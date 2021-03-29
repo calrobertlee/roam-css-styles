@@ -1,9 +1,10 @@
 /*
 Theme:      Core Theme for Aquae, Nox, & Lux Roam themes
-Version:    1.2.1
+Version:    1.2.2
 By:         Cal Robert Lee (https://www.calrobert.com/)
 
-Fixes:      - searchbar results WIP
+Fixes:      - searchbar results z-index
+            - topbar icon positions when selecting search
 
 
 Notes:      - Thanks to the supportive people on r/RoamResearch, GitHub and Twitter!
@@ -929,99 +930,98 @@ padding:  var(--s1);
     color: var(--pomo-break-font-color) !important;
 }
 
+.rm-topbar {
+    opacity: 1 !important;
+    background-color: rgba(238, 0, 0, 0) !important;
+    height: 10px;
+    width: 10px;
+    display: inline-block;
+    padding-left: calc(100vw - 35px) !important;
+    padding-top: 10px !important;
+    position: fixed !important;
+    left: 0px;
+    transition: none !important;
+    z-index: 99999;
+}
 
-/*------------------------------------------------------------------------
-    CODE BELOW FROM AZLEN ELZA's ZENITH THEME — ADDS CENTERED SEARCH
-    MINOR EDITS BY CAL ROBERT LEE (VISUAL, KERNING, and POSITION EDITS)
---------------------------------------------------------------------------*/
+/* TOP RIGHT TOOLBAR ICONS */
 
-  .rm-topbar {
-      opacity: 1 !important;
-      background-color: rgba(238, 0, 0, 0) !important;
-      height: 10px;
-      width: 10px;
-      display: inline-block;
-      padding-left: calc(100vw - 35px) !important;
-      padding-top: 10px !important;
-      position: fixed !important;
-      left: 0px;
-      transition: none !important;
-      z-index: 99999;
-  }
+.rm-topbar > * {
+    position: absolute;
+}
+
+#app > div > div > div.flex-h-box > div.roam-main > div.rm-files-dropzone > div > span:nth-child(7) > span > span > span
+{padding-top: 25px}
   
-  /* TOP RIGHT TOOLBAR ICONS */
-  
-  .rm-topbar > .flex-h-box {
-      width: 490px; /* CRL EDIT */
-      flex-direction: column; /* CRL EDIT */
-      height: 1px !important;
-      align-items: start !important;
-      /*text-align: center;*/
-  
-      position: -webkit-sticky !important;
-      position: sticky !important;
-      left: 0px;
-  }
-  .rm-topbar > .flex-h-box > * {
-      flex: 0 0 15px !important; /* CRL EDIT */
-      margin: auto !important;
-      max-width: 20px !important;
-      max-height: 20px !important;
-  }
-  .rm-topbar > div >.bp3-button:first-child {
-      align-self: start !important;
-      position: fixed !important;
-      left: 16px;
-      top: 16px; /* CRL EDIT */
-      z-index: 9999999 !important;
-  }
-  .rm-topbar > div > *:nth-child(2) {
-      margin-top:0px !important; /* CRL EDIT */
-  }
-  /*#return*/
-  .rm-topbar .bp3-icon-calendar {
-    background: var(--body-bg) !important;
-    border: none;
-  }
-  .rm-topbar .bp3-icon-calendar:hover {
-    background: var(--icon-bg-hover) !important;
-  }
-  
-  /* SOME BLACKMAGIC TO GET SEARCH ICON TO FUNCTION LIKE OTHER BUTTONS —AZLEN ELZA */
-  
-  .rm-topbar .bp3-icon-search {
-      padding: 4px;
-      border-radius: 3px;
-      margin: 0 !important;
-      cursor: pointer;
-  }
-  
-  /* style contains `200px` if search bar is NOT selected */
-  /* hovering search bar in this mode == hovering icon itself */
-  /* we must however have the search bar in front of the icon (but invisible) so that it can focus on click */
-  /* very hacky :P */
-  
-  .rm-find-or-create-wrapper[style*="200px"]:hover .bp3-icon-search, .rm-topbar .bp3-icon-search:hover {
-      background-color: var(--icon-bg-hover);
-      color: var(--minirightbar-icon-color) !important;
-  }
-  .rm-topbar .bp3-icon-search svg {
-      padding: 1px;
-      color: var(--minirightbar-icon-color) !important;
-  
-  }
-  /* fix centering on calendar icon */
-  .rm-topbar .bp3-icon-calendar { margin: 0 !important }
-  
-  .rm-find-or-create-wrapper {
-      width: 20px !important;
-  }
-  .rm-find-or-create-wrapper .bp3-overlay {
-      position: fixed;
-      top: 50px;
-      left: calc(50% - 325px);
-      width: 650px;
-  }
+.rm-topbar > .bp3-popover-wrapper {
+    width: 490px; /* CRL EDIT */
+    flex-direction: column; /* CRL EDIT */
+    height: 1px !important;
+    align-items: start !important;
+    /*text-align: center;*/
+
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    left: 0px;
+}
+.rm-topbar > .bp3-popover-wrapper > * {
+    flex: 0 0 15px !important; /* CRL EDIT */
+    margin: auto !important;
+}
+.rm-topbar > div >.bp3-button:first-child {
+    align-self: start !important;
+    position: fixed !important;
+    left: 16px;
+    top: 16px; /* CRL EDIT */
+    z-index: 9999999 !important;
+}
+.rm-topbar > div > *:nth-child(2) {
+    margin-top:0px !important; /* CRL EDIT */
+}
+/*#return*/
+.rm-topbar .bp3-icon-calendar {
+background: var(--body-bg) !important;
+border: none;
+}
+.rm-topbar .bp3-icon-calendar:hover {
+background: var(--icon-bg-hover) !important;
+}
+
+/* SOME BLACKMAGIC TO GET SEARCH ICON TO FUNCTION LIKE OTHER BUTTONS —AZLEN ELZA */
+
+.rm-topbar .bp3-icon-search {
+    padding: 4px;
+    border-radius: 3px;
+    margin: 0 !important;
+    cursor: pointer;
+}
+
+/* style contains `200px` if search bar is NOT selected */
+/* hovering search bar in this mode == hovering icon itself */
+/* we must however have the search bar in front of the icon (but invisible) so that it can focus on click */
+/* very hacky :P */
+
+.rm-find-or-create-wrapper[style*="200px"]:hover .bp3-icon-search, .rm-topbar .bp3-icon-search:hover {
+    background-color: var(--icon-bg-hover);
+    color: var(--minirightbar-icon-color) !important;
+}
+.rm-topbar .bp3-icon-search svg {
+    padding: 1px;
+    color: var(--minirightbar-icon-color) !important;
+
+}
+/* fix centering on calendar icon */
+.rm-topbar .bp3-icon-calendar { margin: 0 !important }
+
+.rm-find-or-create-wrapper {
+    width: 20px !important;
+}
+.rm-find-or-create-wrapper .bp3-overlay {
+    position: fixed;
+    top: 50px;
+    left: calc(50% - 325px);
+    width: 650px;
+}
   
 /*---------------------------------- 
     #SEARCH BAR
