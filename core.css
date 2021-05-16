@@ -943,15 +943,7 @@ padding:  var(--s1);
     z-index: 99999;
 }
 
-/* TOP RIGHT TOOLBAR ICONS */
-
-.rm-topbar > * {
-    position: absolute;
-}
-
-#app > div > div > div.flex-h-box > div.roam-main > div.rm-files-dropzone > div > span:nth-child(7) > span > span > span
-{padding-top: 25px}
-  
+/* TOP RIGHT TOOLBAR ICONS */  
 .rm-topbar > .bp3-popover-wrapper {
     width: 490px; /* CRL EDIT */
     flex-direction: column; /* CRL EDIT */
