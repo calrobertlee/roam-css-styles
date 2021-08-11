@@ -1,0 +1,264 @@
+
+/*
+Theme:      Roam GitHub Dark Theme
+Version:    3.0.3
+Edits by:   Ruth Oldja (https://rutholdja.netlify.app/)
+Colors by:  Ruth Oldja
+
+Hotfix:     - embed temporary patch
+            - nested ref temp patch
+
+Notes:      - To install copy "@import url('https://calrobertlee.github.io/roam-themes/nox.css');" to roam/css page (without the quotes)
+*/
+
+
+/* IMPORT CORE THEME */
+@import url('https://calrobertlee.github.io/roam-themes/core.css');
+
+:root {
+    /* THEME COLORS */
+    --theme-blue-1: #00B1FB;
+    --theme-gray-1: #C8D1D8;
+    --theme-white-1: #04050D; 
+
+    /* PRIMARY FONTS */
+    --main-font: 'Inter', sans-serif;
+    --main-font-color: var(--theme-gray-1);
+    --main-font-size: 1.0em;
+
+    /* FONT COLORS */
+  
+    --page-link-color: var(--theme-blue-1);
+    --page-bracket-color: #5B5B5B;
+    --external-link-color: var(--theme-blue-1);
+    --external-link-hover-color: rgba(129, 198, 243, .73);
+    --alias-hover-color: hsl(230, 83%, 73%);
+    --daily-notes-link-color: none;
+    --sidebar-link-color: none;
+    --title-color: #c9d1d9;
+    --ref-title-color: #c9d1d9;
+    --header-color: var(--theme-gray-1);
+    --strong: var(--theme-gray-1);
+    --emphasis: var(--theme-gray-1);
+    --highlight-font-color: var(--theme-gray-1);
+    --highlight-background-color: #A6142F;
+    --highlight-link-color: var(--theme-blue-1);
+    --highlight-padding: 4px 5px 4px 5px;
+    --reference-header-color: #313b45;
+    --reference-header-underline-color: #313b4582;
+    --sidebar-font-color: #C8D1D8;
+    --sidebar-font-color-hover: #8f8f8f;
+    --sidebar-hover-bg: none;
+    --sidebar-font-hover-color: #8f8f8f;
+    --sidebar-shorcut-color: #0597F2;
+  
+    --tag-font-color: #515355;
+    --tag-bg-color: #24272a;
+    --tag-border-radius: 10px;
+    --tag-border: 1px solid #35373996;
+    --tag-padding: 1px 5px 2px;
+    --tagHover-font-color: #484a4c;
+    --tagHover-bg-color: #2d3033;
+    --tagHover-border: 1px solid #44464887;
+  
+    --bullet-color: #00B1FB;
+    --bullet-closed-color: #528ed24d;
+    --bullet-closed-border-color: rgba(98, 167, 245, .3);
+    --multibar: hsl(210, 7%, 25%);
+    /*--bullet-position: ;*/
+  
+    --checkmark-top: -1px;
+    --checkmark-left: -2px;
+    --checkmark-height: 14px;
+    --checkmark-width: 14px;
+    --checkmark-border-radius: 4px;
+    --checkmark-color: 1px solid var(--theme-white-1);
+    --checkmark-border: 1px solid hsl(207, 6%, 34%);
+    --checkmark-bg-color: var(--theme-white-1);
+    --checkedmark-border: 1px solid var(--theme-blue-1);
+    --checkedmark-bg-color: #FF863B;
+  
+    --code-bg: #151B26;
+    --code-font: 'Source Code Pro', 'Courier New', Courier, monospace;
+    --code-font-color: #DCDEDD;
+    --code-font-size: 1.0em;
+    --code-border: 1px solid #34373b;
+  
+    --codemirror-bg: #151B26;
+    --codemirror-border-color: #323438;
+    --codemirror-border-radius: 3px;
+    --codemirror-linenumber: #515355;
+    --code-matchingbracket-color: #ead64c;
+  
+    --cm-comment: #7f848e;
+    --cm-def: #FF863B;
+    --cm-keyword: #A6142F;
+    --cm-callee: #0597F2;
+    --cm-operator: #0597F2;
+    --cm-builtin: #0597F2;
+    --cm-string: #30F284;
+    --cm-variable-3: #0597F2;
+    --cm-variable-2: #e06c75;
+    --cm-variable: #FF863B;
+    --cm-tag: #e06c75;
+    --cm-property: #61afef;
+    --cm-number: #FF863B;
+    --cm-atom: #FF863B;
+    --cm-qualifier: #FF863B;
+  
+    --new-page-color: none;
+  
+    --ref-count-font-size: 12px;
+  
+    /* BACKGROUNDS & OUTLINES */
+  
+    --body-bg: var(--theme-white-1);
+    --topbar-bg: rgba(30, 32, 34, 0);
+    --topbar-border-bottom: 0px solid #32343880;
+    --left-sidebar-bg: #151B26;
+    --left-sidebar-border-right: 0px solid rgb(54, 56, 60);
+    --left-sidebar-divider-color: #45474a00;
+    --right-sidebar-bg: #151B26;
+    --right-sidebar-border-left: var(--theme-gray-1);
+    --divider-color: var(--theme-gray-1);
+    --allpage-bottom-border-color: #2d3133;
+    --reference-item-bg: #212325;
+    --reference-item-border-radius: 6px;
+    --reference-item-border: 1px solid rgb(39, 42, 45);
+  
+    --block-highlight: #353a40;
+    --block-highlight-bg: #30F284;
+  
+    --popover-bg: #151B26;
+    --popover-font-color: #DCDEDD;
+    --popover-border: 0.5px solid rgb(70, 73, 77);
+  
+    --inline-search-bg: var(--theme-white-1);
+    --inline-search-border-radius: 6px;
+    --inline-search-border: 1px solid #46494d;
+    --inline-search-button-bg-color: var(--theme-white-1);
+  
+    --datepicker-bg: var(--inline-search-bg);
+    --datepicker-day-wrapper: #36393c;
+    --datepicker-altfont-color: #545d63;
+  
+    --search-font-color: var(--theme-gray-1);
+    --search-body-font-color: #070A0D;
+    --search-outline: #1e6897;
+    --search-bg: var(--theme-white-1);
+    --search-border-radius: 3px;
+    --search-selected-row: #2c2d30;
+  
+    --block-ref-bg: none;
+    --block-ref-hover: none;
+    --block-ref-hover-bg: #353a40;
+    --block-ref-border-bottom: #393d42;
+  
+    /*--pages-row-highlight: ;*/
+    --pages-header-row: var(--theme-white-1);
+    --pages-mentions-level-bg: #00B1FB;
+    --pages-mentions-level1-bg: #0597F2;
+    --pages-mentions-level2-bg: #0575F2;
+    --pages-mentions-font-color: var(--theme-white-1);
+  
+    --icon-color: #7d8386;
+    --icon-bg-hover: #dadfe61c;
+    --icon-color-hover: #dae0e4;
+    --minirightbar-icon-color: #454d52;
+    --pin-color: #FF863B;
+  
+    /* MISC */
+      
+    --kanban-board-bg: #212326;
+    --kanban-board-border: 1px solid #32343880;
+    --kanban-board-border-radius: 10px;
+    --kanban-column-bg: #151B26;
+    --kanban-column-font-color: var(--main-font-color);
+    --kanban-column-margin: 4px 8px 0px 4px;
+    --kanban-card-bg: var(--theme-white-1);
+    --kanban-card-font-color: var(--main-font-color);
+    --kanban-card-border-radius: 4px;
+    --kanban-card-border: 1px solid #323539;
+  
+    --table-border: 1px solid #565656;
+  
+    --embed-container-bg: hsl(213, 9%, 20%);
+  
+    --astrolabe-bg-color: hsl(210, 6%, 20%);
+  
+    --hr-color: #434547;
+  
+    --blockquote-font-color: #ebebeb;
+    --blockquote-border-color: #62A7F5;
+    --blockquote-bg: #151B26;
+    --blockquote-cite: #ebebeb;
+  
+    --encrypted-font-color: #034b9e;
+    --encrypted-bg: hsl(212, 14%, 15%);
+    --encrypted-font-size: 13px;
+    --encrypted-font-weight: 300;
+    --encrypted-border-radius: 4px;
+    --encrypted-padding: 2px 4px;
+      
+    --select-bg-color: var(--theme-white-1);
+    --select-border-color: #3a3f44;
+              
+    --emoji-bg: #151B26;
+    --emoji-border: 0px solid none;
+    --emoji-color: none;
+    
+    --pomo-bg: #151B26;
+    --pomo-border: var(--divider-color);
+    --pomo-running-border: #A6142F;
+    --pomo-running-font-color: #E5493E;
+    --pomo-break-bg: #20372D;
+    --pomo-break-border: #35B96E;
+    --pomo-break-font-color: #30F284;
+  
+    --query-results-border: none;
+    --query-border: 1px solid #3e3b28a8;
+    --query-border-radius: 6px;
+    --query-padding-bottom: 16px;
+    --query-title-font-color: #d0b94482;
+    --query-title-bg: #3d381e8f;  
+  
+    /* Scrollbar settings - to disable set values to none */
+    --scrollbar-track: true;
+    /*--scrollbar-thumb: ;*/
+}
+
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .icon {
+	color: #F24B4B;
+}
+
+/* TEMP PATCH FOR EMBED */
+.rm-embed-container {
+    background-color: hsl(204, 10%, 18%);
+}
+
+.rm-embed-container .rm-embed-container {
+    background-color: hsl(204, 10%, 13%);
+}
+
+.rm-embed-container .rm-embed-container .rm-embed-container{
+    background-color: hsl(204, 10%, 18%);
+}
+
+.rm-embed-container .rm-embed-container .rm-embed-container .rm-embed-container{
+    background-color: hsl(204, 10%, 13%);
+}
+
+/* TEMP PATCH FOR INLINE & NESTED REFS, THANKS b1uegh0st!!! */
+.rm-nested-refs {
+    background-color: hsl(227, 70%, 40%);
+    color: hsl(0, 0%, 91%);
+}
+.rm-inline-references {
+    background-color: hsl(204, 10%, 15%);
+}
+.rm-block__self .rm-block__ref-count.rm-active {
+    background-color: #1f2022;
+} 
+.rm-zoom-path .rm-zoom-item {
+    color: hsl(0, 0%, 91%);
+}
