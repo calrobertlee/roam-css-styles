@@ -21,7 +21,6 @@ how-to: create a file named "roam/css" and paste "@import url('https://ruthrootz
     --main-font-size: 1.0em;
 
     /* FONT COLORS */
-  
     --page-link-color: var(--theme-blue-1);
     --page-bracket-color: #5B5B5B;
     --external-link-color: var(--theme-blue-1);
@@ -45,7 +44,7 @@ how-to: create a file named "roam/css" and paste "@import url('https://ruthrootz
     --sidebar-hover-bg: none;
     --sidebar-font-hover-color: #8f8f8f;
     --sidebar-shorcut-color: #0597F2;
-  
+
     --tag-font-color: #515355;
     --tag-bg-color: #24272a;
     --tag-border-radius: 10px;
@@ -55,12 +54,13 @@ how-to: create a file named "roam/css" and paste "@import url('https://ruthrootz
     --tagHover-bg-color: #2d3033;
     --tagHover-border: 1px solid #44464887;
 
+    --rm-edited-email-color: #F24B4B;
     --bullet-color: #00B1FB;
     --bullet-closed-color: #528ed24d;
     --bullet-closed-border-color: rgba(98, 167, 245, .3);
     --multibar: hsl(210, 7%, 25%);
     /*--bullet-position: ;*/
-  
+
     --checkmark-top: -1px;
     --checkmark-left: -2px;
     --checkmark-height: 14px;
@@ -71,19 +71,19 @@ how-to: create a file named "roam/css" and paste "@import url('https://ruthrootz
     --checkmark-bg-color: var(--theme-white-1);
     --checkedmark-border: 1px solid var(--theme-blue-1);
     --checkedmark-bg-color: #FF863B;
-  
+
     --code-bg: #151B26;
     --code-font: 'Source Code Pro', 'Courier New', Courier, monospace;
     --code-font-color: #DCDEDD;
     --code-font-size: 1.0em;
     --code-border: 1px solid #34373b;
-  
+
     --codemirror-bg: #151B26;
     --codemirror-border-color: #323438;
     --codemirror-border-radius: 3px;
     --codemirror-linenumber: #515355;
     --code-matchingbracket-color: #ead64c;
-  
+
     --cm-comment: #7f848e;
     --cm-def: #FF863B;
     --cm-keyword: #A6142F;
@@ -99,13 +99,12 @@ how-to: create a file named "roam/css" and paste "@import url('https://ruthrootz
     --cm-number: #FF863B;
     --cm-atom: #FF863B;
     --cm-qualifier: #FF863B;
-  
+
     --new-page-color: none;
-  
+
     --ref-count-font-size: 12px;
-  
+
     /* BACKGROUNDS & OUTLINES */
-  
     --body-bg: var(--theme-white-1);
     --topbar-bg: rgba(30, 32, 34, 0);
     --topbar-border-bottom: 0px solid #32343880;
@@ -119,42 +118,42 @@ how-to: create a file named "roam/css" and paste "@import url('https://ruthrootz
     --reference-item-bg: #212325;
     --reference-item-border-radius: 6px;
     --reference-item-border: 1px solid rgb(39, 42, 45);
-  
+
     --block-highlight: #353a40;
     --block-highlight-bg: #30F284;
-  
+
     --popover-bg: #151B26;
     --popover-font-color: #DCDEDD;
     --popover-border: 0.5px solid rgb(70, 73, 77);
-  
+
     --inline-search-bg: var(--theme-white-1);
     --inline-search-border-radius: 6px;
     --inline-search-border: 1px solid #46494d;
     --inline-search-button-bg-color: var(--theme-white-1);
-  
+
     --datepicker-bg: var(--inline-search-bg);
     --datepicker-day-wrapper: #36393c;
     --datepicker-altfont-color: #545d63;
-  
+
     --search-font-color: var(--theme-gray-1);
     --search-body-font-color: #070A0D;
     --search-outline: #1e6897;
     --search-bg: var(--theme-white-1);
     --search-border-radius: 3px;
     --search-selected-row: #2c2d30;
-  
+
     --block-ref-bg: none;
     --block-ref-hover: none;
     --block-ref-hover-bg: #353a40;
     --block-ref-border-bottom: #393d42;
-  
+
     /*--pages-row-highlight: ;*/
     --pages-header-row: var(--theme-white-1);
     --pages-mentions-level-bg: #00B1FB;
     --pages-mentions-level1-bg: #0597F2;
     --pages-mentions-level2-bg: #0575F2;
     --pages-mentions-font-color: var(--theme-white-1);
-  
+
     --icon-color: #7d8386;
     --icon-bg-hover: #dadfe61c;
     --icon-color-hover: #dae0e4;
@@ -162,7 +161,6 @@ how-to: create a file named "roam/css" and paste "@import url('https://ruthrootz
     --pin-color: #FF863B;
   
     /* MISC */
-      
     --kanban-board-bg: #212326;
     --kanban-board-border: 1px solid #32343880;
     --kanban-board-border-radius: 10px;
@@ -173,20 +171,20 @@ how-to: create a file named "roam/css" and paste "@import url('https://ruthrootz
     --kanban-card-font-color: var(--main-font-color);
     --kanban-card-border-radius: 4px;
     --kanban-card-border: 1px solid #323539;
-  
+
     --table-border: 1px solid #565656;
-  
+
     --embed-container-bg: hsl(213, 9%, 20%);
-  
+
     --astrolabe-bg-color: hsl(210, 6%, 20%);
-  
+
     --hr-color: #434547;
-  
+
     --blockquote-font-color: #ebebeb;
     --blockquote-border-color: #62A7F5;
     --blockquote-bg: #151B26;
     --blockquote-cite: #ebebeb;
-  
+
     --encrypted-font-color: #034b9e;
     --encrypted-bg: hsl(212, 14%, 15%);
     --encrypted-font-size: 13px;
@@ -222,11 +220,11 @@ how-to: create a file named "roam/css" and paste "@import url('https://ruthrootz
 }
 
 .roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .icon {
-	color: #F24B4B;
+    color: #F24B4B;
 }
 
 .rm-bullet__inner--user-icon {
-  	background-color: #F24B4B
+    background-color: #F24B4B
 }
 
 /* TEMP PATCH FOR EMBED */
