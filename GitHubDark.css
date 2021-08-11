@@ -250,12 +250,15 @@ create a file named "roam/css" and paste "@import url('https://ruthrootz.github.
     background-color: hsl(227, 70%, 40%);
     color: hsl(0, 0%, 91%);
 }
+
 .rm-inline-references {
     background-color: hsl(204, 10%, 15%);
 }
+
 .rm-block__self .rm-block__ref-count.rm-active {
     background-color: #1f2022;
-} 
+}
+
 .rm-zoom-path .rm-zoom-item {
     color: hsl(0, 0%, 91%);
 }
