@@ -1,13 +1,12 @@
 /*
 theme: Roam GitHub Dark Theme
-version: 1.0.0
+version: 1.0.1
 by: Ruth Oldja (https://rutholdja.netlify.app/)
 forked from: calrobertlee/roam-css-styles
 
 how-to: create a file named "roam/css" and paste "@import url('https://ruthrootz.github.io/roam-css-styles/githubdark.css');" into a codeblock of language type CSS
 
 */
-
 
 /* IMPORT CORE THEME */
 @import url('https://calrobertlee.github.io/roam-themes/core.css');
@@ -57,7 +56,7 @@ how-to: create a file named "roam/css" and paste "@import url('https://ruthrootz
     --tagHover-font-color: #484a4c;
     --tagHover-bg-color: #2d3033;
     --tagHover-border: 1px solid #44464887;
-  
+
     --bullet-color: #00B1FB;
     --bullet-closed-color: #528ed24d;
     --bullet-closed-border-color: rgba(98, 167, 245, .3);
@@ -226,6 +225,10 @@ how-to: create a file named "roam/css" and paste "@import url('https://ruthrootz
 
 .roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .icon {
 	color: #F24B4B;
+}
+
+.rm-bullet__inner--user-icon {
+  	background-color: #F24B4B
 }
 
 /* TEMP PATCH FOR EMBED */
