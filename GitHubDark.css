@@ -1,6 +1,6 @@
 /*
 theme: Roam GitHub Dark Theme
-version: 1.0.1
+version: 1.0.2
 by: Ruth Oldja (https://rutholdja.netlify.app/)
 forked from: calrobertlee/roam-css-styles
 how-to: create a file named "roam/css" and paste "@import url('https://ruthrootz.github.io/roam-css-styles/githubdark.css');" into a codeblock of language type CSS
@@ -224,7 +224,7 @@ how-to: create a file named "roam/css" and paste "@import url('https://ruthrootz
 }
 
 .rm-bullet__inner--user-icon {
-    background-color: #F24B4B
+    background-color: #F24B4B !important;
 }
 
 /* TEMP PATCH FOR EMBED */
