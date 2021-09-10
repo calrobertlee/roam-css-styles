@@ -275,6 +275,8 @@ span.cm-atom {
     color: var(--cm-atom) !important;}
 span.cm-qualifier {
     color: var(--cm-qualifier) !important;}
+span.cm-attribute {
+    color: var(--cm-attribute) !important;}
 
 /*---------------------------------- 
     #ENCRYPTED BLOCK   
