@@ -1,15 +1,7 @@
 # Cal Robert's Roam Themes
 
-- Update: Split primary code to `core.css`. Different color variations will now be in separate css files.
+- Update: This Repository and its contents are not maintained. I may return to work on this projet when the Roam team makes things a bit easier.
 
-- Minimal aestheic with highly refined color palettes
-- Removed topbar for more space (shifted to right vertical bar)
-- Centered search bar (using a bit of magic found in Azlen's Zenith theme)
-
-To use, copy the @import line into a Roam page titled roam/css
-This process can take about 20-30 seconds so please be patient!
-
-[❤️ Donation link](https://www.paypal.me/calrobertdesign) if you enjoy these themes and want to support more future projects! Also, thanks to my recent patrons, it's been great designing these themes for you guys.
 
 ## Aqaue
 `@import url('https://calrobertlee.github.io/roam-themes/aquae.css');`
