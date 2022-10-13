@@ -255,3 +255,43 @@ background-color: hsl(213, 10%, 13%);
 .rm-zoom-path .rm-zoom-item {
     color: hsl(0, 0%, 91%);
 }
+
+/* PATCH FOR CODE EMBED */
+/* overall code block bg */
+.rm-code-block {
+   background-color: #1f2022;
+}
+.cm-lineNumbers {
+   background-color: #1f2022;
+}
+/* sidebar column */
+.cm-gutter {
+   background-color: #1f2022;
+}
+/* highlight active line */
+.cm-focused .cm-activeLine {
+   background-color: #1f2022 !important;
+}
+/* highlighting */
+.cm-selectionBackground {
+   background: #AEB8CC !important;
+}
+/* wont work */
+.cm-activeLineGutter {
+   background-color: #1f2022 !important;
+}
+.cm-cursor {
+   border-left: 1.2px solid #fee2e2 !important;
+}
+/* keyword colors */
+.ͼa {
+    color: #708;
+}
+.ͼb {
+    color: #fecaca !important;
+}
+.ͼc {
+    color: #164;
+}
+/**/
+
